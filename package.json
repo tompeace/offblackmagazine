@@ -1,0 +1,29 @@
+{
+  "name": "offblackmagazine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tompeace/offblackmagazine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tompeace/offblackmagazine/issues"
+  },
+  "homepage": "https://github.com/tompeace/offblackmagazine#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bva-gulp-react": "git+ssh://git@codebasehq.com:bureau/bva-core/bva-gulp-react.git#v0.0.3",
+    "bva-gulp-styles": "git+ssh://git@codebasehq.com:bureau/bva-core/bva-gulp-styles.git#v0.0.2",
+    "gulp": "^3.9.1",
+    "nodemon": "^1.12.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
