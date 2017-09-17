@@ -1,0 +1,27 @@
+:root {
+    --transition-opacity: opacity .3s cubic-bezier(.45,.65,.34,.96);
+}
+
+.transition-colour {
+    transition: color .2s cubic-bezier(.45,.65,.34,.96);
+}
+
+.transition-bg-colour {
+    transition: background-color .2s cubic-bezier(.45,.65,.34,.96);
+}
+
+.transition-opacity {
+    transition: var(--transition-opacity);
+}
+
+.transform-left-100 {
+    transform: translate(-100%,0);
+}
+
+.transform-up-100 {
+    transform: translate(0, -100%);
+}
+
+.animate {
+    transition: all .5s cubic-bezier(.45,.65,.34,.96);
+}

@@ -1,0 +1,129 @@
+@media print {
+
+    /* General */
+    html, body {
+        height: auto;
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+    @page {
+        margin: 0.75cm;
+
+    }
+
+    p a[href^="http://"]:after, a[href^="https://"]:after {
+        content: " (" attr(href) ")";
+    }
+    /* Fonts */
+    h1 {
+        font-family: var(--body-font-family);
+        font-weight: var(--body-font-weight);
+    }
+
+    header, footer {
+        display: none;
+    }
+    .bg-cream {
+        background: white;
+    }
+
+    /* print icon */
+    h3 i {
+        display: none;
+    }
+
+    /* section heading */
+    .container .col-12.md-col-4 {
+        display: none;
+    }
+    .border-left.border-grey-004,
+    .border-top.border-grey-003 {
+        border: none;
+    }
+    article .pl5 {
+        padding:0;
+    }
+
+    /* Remove left column */
+    .container .col-right {
+        float:none;
+        width:100%;
+    }
+    section.md-pl5 {
+        padding:0;
+    }
+    .container .md-pl5.md-mln5.bg-grey-006 {
+        background: white;
+        padding:0;
+        margin:0;
+    }
+
+    /* TOC */
+    .container .md-sticky.col-12 {
+        position: relative;
+        width: 100%;
+        display: block;
+        z-index: 2;
+        border:0;
+        margin-bottom:40px;
+    }
+    .container .md-sticky > ul > li {
+        border-color: var(--black);
+    }
+    .container .md-sticky ul li:before,
+    .container .md-sticky ul li:after
+     {
+        content: " ";
+        display: table;
+    }
+    .container .md-sticky ul li:after {
+        clear: both;
+    }
+    .container .md-sticky > ul > li > a {
+        width:50%;
+        float:left;
+    }
+    .container .md-sticky ul ul li:first {
+        border:0;
+    }
+    .container .md-sticky ul ul li {
+        border-color: var(--grey-002);
+    }
+    .container .md-sticky ul ul {
+        width: 50%;
+        display: block;
+        float:left;
+    }
+
+    .col-12.md-col-8 {
+        width: 85%;
+    }
+
+    /* Gallery */
+    button.button {
+        display:none;
+    }
+
+    figure > div.aspect-16-9,
+    figure div.aspect-16-9.hide {
+        position: relative !important;
+        display: block;
+        height: auto;
+        width: auto;
+    }
+    figure .caption {
+        display:block;
+        position: relative !important;
+        width:auto;
+        height:auto;
+    }
+    .limit-line-width.h5 {
+        display:none;
+    }
+    /* Accordion */
+    .pt2.hide {
+        height: auto;
+        width: auto;
+        position: relative !important;
+    }
+}

@@ -7,8 +7,8 @@
 require('babel-polyfill');
 require('whatwg-fetch');
 
-// const App = require('../components/app/app.jsx');
-const App = (props) => (<div>hello {props.title}</div>)
+import App from './components/main.jsx';
+
 // const props = JSON.parse(document.getElementById('props').innerHTML);
 const props = {title: 'world'}
 

@@ -1,0 +1,19 @@
+.border-transparent {
+    border-color: transparent;
+}
+
+:focus {
+    outline:none;
+}
+
+@media (--breakpoint-sm) {
+    .sm-border-none {
+        border-width: 0;
+    }
+}
+
+@media (--breakpoint-md) {
+    .md-border-none {
+        border-width: 0;
+    }
+}

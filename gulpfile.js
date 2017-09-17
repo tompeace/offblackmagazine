@@ -3,7 +3,8 @@
  */
 
 const gulp = require('gulp');
-const nodemon = require('nodemon');
+const flatten = require('gulp-flatten');
+
 
 const config = {
     styles: {
@@ -15,11 +16,19 @@ const config = {
             browsers: ['last 5 versions']
         }
     },
+    fonts: {
+        src: './assets/src/fonts/**/*',
+        dest: './assets/dest/fonts'
+    },
+    images: {
+        src: './assets/src/images',
+        dest: './assets/dest/images'
+    },
     react: {
         dev: true,
         src: './src/',
         dest: './assets/dest/js',
-        watch: './src/components/',
+        watch: './src/**/*',
         literalify: {
             'react/addons': 'window.React',
             'react': 'window.React'
@@ -31,20 +40,21 @@ const config = {
 
 require('bva-gulp-styles')(gulp, config.styles);
 require('bva-gulp-react')(gulp, config.react);
+require('bva-gulp-images')(gulp, config.images);
 
 // watch
 gulp.task('watch', () => {
     gulp.watch('./assets/src/css/**/*.css', ['styles']);
     gulp.watch(config.react.watch + '{*.js,*.jsx,**/*.js,**/*.jsx}', ['react']);
+    gulp.watch(config.fonts.src, ['fonts']);
+    gulp.watch(config.images.src + '/**/*.{jpg,png,gif}', ['images']);
 });
 
-// // server
-// gulp.task('server', ['watch'], () => {
-//     nodemon({
-//         script: 'index.js',
-//         ext: 'js jsx html'
-//     });
-// });
+gulp.task('fonts', () => {
+    return gulp.src(config.fonts.src)
+        .pipe(flatten())
+		.pipe(gulp.dest(config.fonts.dest));
+});
 
 // build
-gulp.task('default', ['react', 'styles']);
+gulp.task('default', ['react', 'styles', 'images', 'fonts']);
