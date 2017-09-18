@@ -16,13 +16,18 @@
 @custom-media --breakpoint-md-lg (min-width: 1023px);
 @custom-media --breakpoint-lg (min-width: 1280px); /* Large desktop */
 
+@font-face {
+    font-family: "akzidenz";
+    src: url("../fonts/akzidenz-grotesk-regular.woff2") format("woff2");
+}
 
-@@font-face {
-
+@font-face {
+    font-family: "akzidenz condensed";
+    src: url("../fonts/akzidenz.woff") format("woff");
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
     height: 100%;
     width: 100%;
 }
@@ -31,7 +36,7 @@ body {
     height: 100%;
     width: 100%;
     font-size: 1rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "akzidenz", Helvetica, Arial, sans-serif;
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 15.4px;
@@ -223,11 +228,17 @@ pre, .pre {
     z-index: -1;
 }
 
-
-
 .crossed {
     background: url('data:image/svg+xml;utf8,<svg id="Layer_1" preserveAspectRatio="none" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.83 900.55"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><title>backgorund_cross</title><line class="cls-1" x1="0.42" y1="0.28" x2="600.42" y2="900.28"/><line class="cls-1" x1="600.42" y1="0.28" x2="0.42" y2="900.28"/></svg>');
     background-repeat:no-repeat;
     background-position:center center;
     background-size: 100% 100%, auto;
+}
+
+.max-height-100 {
+    max-height: 100vh;
+}
+
+.max-width-100 {
+    max-width: 100%;
 }

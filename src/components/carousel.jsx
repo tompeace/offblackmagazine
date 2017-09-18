@@ -23,15 +23,16 @@ class Carousel extends React.Component {
         this.setState({index: i});
     }
 
+
     render() {
-        let images
+        let images;
         if (this.props.images) {
             images = this.props.images.map((image, i) => {
                 const hide = this.state.index === i ? '' : 'hide'
                 return (
                     <img
+                        className={`${hide} block ${this.props.className}`}
                         key={i}
-                        className={`${hide} height-100 col-12`}
                         src={image} />
                 )
             })
@@ -40,7 +41,7 @@ class Carousel extends React.Component {
         }
 
         return (
-            <div className='height-100 overflow-hidden'>
+            <div>
                 {images}
             </div>
         )
