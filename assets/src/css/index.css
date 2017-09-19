@@ -242,3 +242,56 @@ pre, .pre {
 .max-width-100 {
     max-width: 100%;
 }
+
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}*/
+
+body{
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.table {
+    display: table;
+    padding:0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.tr {
+    display: table-row;
+    padding:0;
+    margin: 0;
+    max-width:100vw;
+    max-height:100vh;
+}
+
+.td {
+    display: table-cell;
+    padding: 0;
+    margin: 0;
+    max-width:100vw;
+    max-height:100vh;
+    text-align:center;
+    vertical-align: middle;
+}
+
+.td-1{
+    text-align: right;
+}
+
+.td-2{
+    text-align: left;
+}
+
+.center-carousel-img {
+    box-sizing: border-box;
+    max-width:50vw;
+    padding: 0;
+    margin: 0;
+}

@@ -16,33 +16,66 @@ class Carousel extends React.Component {
     tick() {
         let i = this.state.index + 1;
         if (i < 0) {
-            i = this.props.images.length - 1;
-        } else if (i > this.props.images.length - 1) {
+            i = this.props.items.length - 1;
+        } else if (i > this.props.items.length - 1) {
             i = 0;
         }
         this.setState({index: i});
     }
 
-
     render() {
-        let images;
-        if (this.props.images) {
-            images = this.props.images.map((image, i) => {
-                const hide = this.state.index === i ? '' : 'hide'
-                return (
-                    <img
-                        className={`${hide} block ${this.props.className}`}
-                        key={i}
-                        src={image} />
-                )
-            })
-        } else {
-            images = <div className='height-100 col-12 crossed' />
-        }
+        let items = this.props.items.map((item, i) => {
+            let component
+            const hide = this.state.index === i ? '' : 'hide'
+            switch (item.format) {
+                case 'jpg':
+                    component = (
+                        <img
+                            className={`${this.props.imgClassName} max-height-100 ${hide}`}
+                            src={item.src} />
+                    )
+                    break;
+                case 'mp4':
+                    component = (
+                        <video
+                            muted={this.state.index !== i}
+                            preload
+                            autoPlay='auto'
+                            width='100%'
+                            height='100%'
+                            className={`${this.props.imgClassName} max-height-100 ${hide}`}>
+                            <source
+                                src={item.src}
+                                type="video/mp4" />
+                        </video>
+                    )
+                    break;
+                case 'svg':
+                    component = (
+                        <object
+                            className={`${this.props.imgClassName}  max-height-100 ${hide}`}
+                            data={item.src}
+                            width='100%'
+                            height='100%'
+                            type="image/svg+xml">
+                            <div className='height-100 col-12 crossed' />
+                        </object>
+                    )
+                    break;
+                default:
+                    component = <div className='height-100 col-12 crossed' />
+
+            }
+            return (
+                <div className='overflow-hidden max-height-100' key={i}>
+                    {component}
+                </div>
+            )
+        })
 
         return (
-            <div>
-                {images}
+            <div className={this.props.className || ''}>
+                {items}
             </div>
         )
     }
