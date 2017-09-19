@@ -36,14 +36,16 @@ class Carousel extends React.Component {
                     )
                     break;
                 case 'mp4':
+                console.log(item);
                     component = (
                         <video
-                            muted={this.state.index !== i}
+                            muted={(item.opts && item.opts.video.muted) || this.state.index !== i}
                             preload
+                            loop={true}
                             autoPlay='auto'
                             width='100%'
                             height='100%'
-                            className={`${this.props.imgClassName} max-height-100 ${hide}`}>
+                            className={`${this.props.imgClassName} object-fit-cover max-height-100 ${hide}`}>
                             <source
                                 src={item.src}
                                 type="video/mp4" />
@@ -53,7 +55,7 @@ class Carousel extends React.Component {
                 case 'svg':
                     component = (
                         <object
-                            className={`${this.props.imgClassName}  max-height-100 ${hide}`}
+                            className={`${this.props.imgClassName} p0 max-height-100 ${hide}`}
                             data={item.src}
                             width='100%'
                             height='100%'
@@ -67,7 +69,7 @@ class Carousel extends React.Component {
 
             }
             return (
-                <div className='overflow-hidden max-height-100' key={i}>
+                <div className='relative overflow-hidden max-height-100' key={i}>
                     {component}
                 </div>
             )

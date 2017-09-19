@@ -30,7 +30,13 @@ class Main extends React.Component {
                             imgClassName='col-12 height-100'
                             items={[
                                 {src: './assets/dest/images/OB_background-02.jpg', format: 'jpg'},
-                                {src: './assets/dest/images/OB_background-09.mp4', format: 'mp4'}
+                                {src: './assets/dest/images/OB_background-09.mp4', format: 'mp4',
+                                    opts: {
+                                        video: {
+                                            muted: true
+                                        }
+                                    }
+                                }
                             ]}
                         />
                     </div>
@@ -59,7 +65,7 @@ class Main extends React.Component {
                                     {src: './assets/dest/images/OB_left-01.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-02.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-03-04.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-05-06.mov', format: 'mov'},
+                                    {src: './assets/dest/images/OB_left-05-06.mp4', format: 'mp4'},
                                     {src: './assets/dest/images/OB_left-07.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-08-09.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-10.jpg', format: 'jpg'},
