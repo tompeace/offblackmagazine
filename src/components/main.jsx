@@ -29,6 +29,7 @@ class Main extends React.Component {
                 <div>
                     <div className="zn1 absolute top-0 bottom-0 left-0 right-0">
                         <video
+                            className='object-fit-cover absolute top-0 bottom-0 left-0 right-0'
                             ref='video'
                             muted={true}
                             preload
@@ -40,10 +41,10 @@ class Main extends React.Component {
                                 type="video/mp4" />
                         </video>
                     </div>
-                    <div className='z1 bg-white mr4 ml4 mt4 p2 fixed top-0 left-0 right-0 border border-black line-height-2'>
+                    <div className='z1 bg-white mr3 ml3 mt3 p2 fixed top-0 left-0 right-0 border border-black line-height-2'>
                         Anthology Issue A/W 2017
                     </div>
-                    <div className='marquee z1 bg-white mr4 ml4 mb4 py2 fixed bottom-0 left-0 right-0 border border-black overflow-hidden line-height-2'>
+                    <div className='marquee z1 bg-white mr3 ml3 mb3 py2 fixed bottom-0 left-0 right-0 border border-black overflow-hidden line-height-2'>
                         <div className='marquee'>
                             <span>COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
                         </div>
@@ -60,8 +61,11 @@ class Main extends React.Component {
                                     {src: './assets/dest/images/OB_left-01.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-02.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-03-04.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_left-03-04.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_left-05-06.gif', format: 'gif'},
                                     {src: './assets/dest/images/OB_left-05-06.gif', format: 'gif'},
                                     {src: './assets/dest/images/OB_left-07.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_left-08-09.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-08-09.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-10.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-11.jpg', format: 'jpg'},
@@ -75,10 +79,14 @@ class Main extends React.Component {
                                 items={[
                                     {src: './assets/dest/images/OB_right-01.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-02-03.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_right-02-03.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-04-05.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_right-04-05.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_right-06-07.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-06-07.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-08.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_left-12.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_right-11-12.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-11-12.jpg', format: 'jpg'}
                                 ]}
                             />

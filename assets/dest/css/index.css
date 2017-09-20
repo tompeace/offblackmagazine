@@ -2941,7 +2941,7 @@ html {
 
 @media (min-width: 1023px) {
     html {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -3266,7 +3266,7 @@ body{
     max-width:50vw;
     padding: 0;
     margin: 0;
-    max-height: calc(100vh - 30px);
+    max-height: calc(100vh - 20px);
 }
 
 .object-fit-cover {

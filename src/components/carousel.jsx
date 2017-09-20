@@ -43,9 +43,8 @@ class Carousel extends React.Component {
                             preload
                             loop={true}
                             autoPlay='auto'
-                            width='100%'
                             height='100%'
-                            className={`${this.props.imgClassName} border border-black ${hide}`}>
+                            className={`${this.props.imgClassName} object-fit-cover border border-black ${hide}`}>
                             <source
                                 src={item.src}
                                 type="video/mp4" />
