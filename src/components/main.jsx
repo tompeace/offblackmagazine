@@ -38,6 +38,7 @@ class Main extends React.Component {
                             <Carousel
                                 imgClassName='center-carousel-img'
                                 className='td td-1'
+                                borderClass='border-top border-bottom border-left border-right border-black'
                                 interval={2000}
                                 items={[
                                     {src: './assets/dest/images/OB_left-01.jpg', format: 'jpg'},
@@ -57,6 +58,7 @@ class Main extends React.Component {
                             <Carousel
                                 imgClassName='center-carousel-img'
                                 className='td td-2'
+                                borderClass='border-top border-bottom border-right border-black'
                                 interval={2000}
                                 items={[
                                     {src: './assets/dest/images/OB_right-01.jpg', format: 'jpg'},

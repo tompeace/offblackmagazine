@@ -32,7 +32,7 @@ class Carousel extends React.Component {
                 case 'gif' :
                     component = (
                         <img
-                            className={`${this.props.imgClassName} border border-black max-height-100 ${hide}`}
+                            className={`${this.props.imgClassName} ${this.props.borderClass} max-height-100 ${hide}`}
                             src={item.src} />
                     )
                     break;
@@ -44,7 +44,7 @@ class Carousel extends React.Component {
                             loop={true}
                             autoPlay='auto'
                             height='100%'
-                            className={`${this.props.imgClassName} object-fit-cover border border-black ${hide}`}>
+                            className={`${this.props.imgClassName} object-fit-cover ${this.props.borderClass} ${hide}`}>
                             <source
                                 src={item.src}
                                 type="video/mp4" />
@@ -54,7 +54,7 @@ class Carousel extends React.Component {
                 case 'svg':
                     component = (
                         <object
-                            className={`${this.props.imgClassName} border border-black p0 max-height-100 ${hide}`}
+                            className={`${this.props.imgClassName} ${this.props.borderClass} p0 max-height-100 ${hide}`}
                             data={item.src}
                             width='100%'
                             height='100%'
