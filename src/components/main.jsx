@@ -13,6 +13,10 @@ class Main extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.refs.video.playbackRate = 0.5
+    }
+
     handleToggle() {
         this.setState({
             menuActive: !this.state.menuActive
@@ -25,6 +29,7 @@ class Main extends React.Component {
                 <div>
                     <div className="zn1 absolute top-0 bottom-0 left-0 right-0">
                         <video
+                            ref='video'
                             muted={true}
                             preload
                             loop={true}
