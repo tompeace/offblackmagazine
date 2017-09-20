@@ -28,15 +28,15 @@ class Carousel extends React.Component {
             let component
             const hide = this.state.index === i ? '' : 'hide'
             switch (item.format) {
-                case 'jpg':
+                case 'jpg' :
+                case 'gif' :
                     component = (
                         <img
-                            className={`${this.props.imgClassName} max-height-100 ${hide}`}
+                            className={`${this.props.imgClassName} border border-black max-height-100 ${hide}`}
                             src={item.src} />
                     )
                     break;
                 case 'mp4':
-                console.log(item);
                     component = (
                         <video
                             muted={(item.opts && item.opts.video.muted) || this.state.index !== i}
@@ -45,7 +45,7 @@ class Carousel extends React.Component {
                             autoPlay='auto'
                             width='100%'
                             height='100%'
-                            className={`${this.props.imgClassName} object-fit-cover max-height-100 ${hide}`}>
+                            className={`${this.props.imgClassName} border border-black ${hide}`}>
                             <source
                                 src={item.src}
                                 type="video/mp4" />
@@ -55,7 +55,7 @@ class Carousel extends React.Component {
                 case 'svg':
                     component = (
                         <object
-                            className={`${this.props.imgClassName} p0 max-height-100 ${hide}`}
+                            className={`${this.props.imgClassName} border border-black p0 max-height-100 ${hide}`}
                             data={item.src}
                             width='100%'
                             height='100%'

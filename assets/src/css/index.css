@@ -1,11 +1,10 @@
 @import 'bva-gulp-styles';
 
 :root {
-    --space-1: .25rem;
-    --space-2: .50rem;
-    --space-3: 1rem;
-    --space-4: 2rem;
-    --space-5: 4rem;
+    --space-1: 10px;
+    --space-2: 15px;
+    --space-3: 20px;
+    --space-4: 30px;
 
     --border-1px: 1px solid;
 }
@@ -294,8 +293,31 @@ body{
     max-width:50vw;
     padding: 0;
     margin: 0;
+    max-height: calc(100vh - 30px);
 }
 
 .object-fit-cover {
     object-fit: cover;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;  /* show the marquee just outside the paragraph */
+    animation: marquee 15s linear infinite;
+}
+
+.marquee span:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
 }
