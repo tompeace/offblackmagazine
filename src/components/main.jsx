@@ -34,8 +34,7 @@ class Main extends React.Component {
                             preload
                             loop={true}
                             autoPlay='auto'
-                            height='100%'
-                            className={'kajdshf'}>
+                            height='100%'>
                             <source
                                 src='./assets/dest/images/OB_background-09.mp4'
                                 type="video/mp4" />
