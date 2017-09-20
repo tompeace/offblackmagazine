@@ -13,10 +13,6 @@ class Main extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.refs.video.playbackRate = 0.5
-    }
-
     handleToggle() {
         this.setState({
             menuActive: !this.state.menuActive
@@ -27,20 +23,6 @@ class Main extends React.Component {
         return (
             <main className='relative height-100 overflow-hidden'>
                 <div>
-                    <div className="zn1 absolute top-0 bottom-0 left-0 right-0">
-                        <video
-                            className='object-fit-cover absolute top-0 bottom-0 left-0 right-0'
-                            ref='video'
-                            muted={true}
-                            preload
-                            loop={true}
-                            autoPlay='auto'
-                            height='100%'>
-                            <source
-                                src='./assets/dest/images/OB_background-09.mp4'
-                                type="video/mp4" />
-                        </video>
-                    </div>
                     <div className='z1 bg-white mr3 ml3 mt3 p2 fixed top-0 left-0 right-0 border border-black line-height-2'>
                         Anthology Issue A/W 2017
                     </div>
@@ -85,7 +67,8 @@ class Main extends React.Component {
                                     {src: './assets/dest/images/OB_right-06-07.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-06-07.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-08.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-12.jpg', format: 'jpg'},
+                                    {src: './assets/dest/images/OB_right-09-10.gif', format: 'gif'},
+                                    {src: './assets/dest/images/OB_right-09-10.gif', format: 'gif'},
                                     {src: './assets/dest/images/OB_right-11-12.jpg', format: 'jpg'},
                                     {src: './assets/dest/images/OB_right-11-12.jpg', format: 'jpg'}
                                 ]}
