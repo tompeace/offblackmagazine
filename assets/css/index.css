@@ -7,6 +7,7 @@
     --space-4: 30px;
 
     --border-1px: 1px solid;
+    --border-color: black;
 }
 
 @custom-media --breakpoint-sm (min-width: 668px); /* Tablet */

@@ -41,18 +41,18 @@ class Main extends React.Component {
                                 borderClass='border-top border-bottom border-left border-right border-black'
                                 interval={2000}
                                 items={[
-                                    {src: './assets/dest/images/OB_left-01.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-02.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-03-04.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-03-04.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-05-06.gif', format: 'gif'},
-                                    {src: './assets/dest/images/OB_left-05-06.gif', format: 'gif'},
-                                    {src: './assets/dest/images/OB_left-07.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-08-09.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-08-09.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-10.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-11.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_left-12.jpg', format: 'jpg'}
+                                    {src: './build/images/OB_left-01.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-02.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-03-04.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-03-04.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-05-06.gif', format: 'gif'},
+                                    {src: './build/images/OB_left-05-06.gif', format: 'gif'},
+                                    {src: './build/images/OB_left-07.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-08-09.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-08-09.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-10.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-11.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_left-12.jpg', format: 'jpg'}
                                 ]}
                             />
                             <Carousel
@@ -61,18 +61,18 @@ class Main extends React.Component {
                                 borderClass='border-top border-bottom border-right border-black'
                                 interval={2000}
                                 items={[
-                                    {src: './assets/dest/images/OB_right-01.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-02-03.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-02-03.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-04-05.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-04-05.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-06-07.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-06-07.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-08.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-09-10.gif', format: 'gif'},
-                                    {src: './assets/dest/images/OB_right-09-10.gif', format: 'gif'},
-                                    {src: './assets/dest/images/OB_right-11-12.jpg', format: 'jpg'},
-                                    {src: './assets/dest/images/OB_right-11-12.jpg', format: 'jpg'}
+                                    {src: './build/images/OB_right-01.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-02-03.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-02-03.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-04-05.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-04-05.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-06-07.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-06-07.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-08.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-09-10.gif', format: 'gif'},
+                                    {src: './build/images/OB_right-09-10.gif', format: 'gif'},
+                                    {src: './build/images/OB_right-11-12.jpg', format: 'jpg'},
+                                    {src: './build/images/OB_right-11-12.jpg', format: 'jpg'}
                                 ]}
                             />
                         </div>

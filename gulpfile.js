@@ -9,25 +9,25 @@ const flatten = require('gulp-flatten');
 const config = {
     styles: {
         dev: true,
-        src: './assets/src/css/index.css',
-        dest: './assets/dest/css',
+        src: './assets/css/index.css',
+        dest: './build/css',
         postcss: {},
         autoprefixer: {
             browsers: ['last 5 versions']
         }
     },
     fonts: {
-        src: './assets/src/fonts/**/*',
-        dest: './assets/dest/fonts'
+        src: './assets/fonts/**/*',
+        dest: './build/fonts'
     },
     images: {
-        src: './assets/src/images',
-        dest: './assets/dest/images'
+        src: './assets/images',
+        dest: './build/images'
     },
     react: {
         dev: true,
         src: './src/',
-        dest: './assets/dest/js',
+        dest: './build/js',
         watch: './src/**/*',
         literalify: {
             'react/addons': 'window.React',
@@ -44,7 +44,7 @@ require('bva-gulp-images')(gulp, config.images);
 
 // watch
 gulp.task('watch', () => {
-    gulp.watch('./assets/src/css/**/*.css', ['styles']);
+    gulp.watch('./assets/css/**/*.css', ['styles']);
     gulp.watch(config.react.watch + '{*.js,*.jsx,**/*.js,**/*.jsx}', ['react']);
     gulp.watch(config.fonts.src, ['fonts']);
     gulp.watch(config.images.src + '/**/*.{jpg,png,gif}', ['images']);
