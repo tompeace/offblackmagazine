@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-class Main extends React.Component {
+class ListingPage extends React.Component {
 
     constructor() {
         super()
@@ -29,4 +29,4 @@ class Main extends React.Component {
     }
 }
 
-export default Main
+export default ListingPage
