@@ -4,7 +4,7 @@
 
 const gulp = require('gulp');
 const flatten = require('gulp-flatten');
-
+const browserSync = require('browser-sync');
 
 const config = {
     styles: {
@@ -37,6 +37,14 @@ const config = {
 };
 
 // Tasks
+
+gulp.task('browser-sync', () => {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
 
 require('bva-gulp-styles')(gulp, config.styles);
 require('bva-gulp-react')(gulp, config.react);
