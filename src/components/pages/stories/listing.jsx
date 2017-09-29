@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Image from '../../partials/image.jsx'
 import util from '../../utilities'
 
 class ListingPage extends React.Component {
@@ -19,15 +20,14 @@ class ListingPage extends React.Component {
                 <div className='clearfix col col-2 aspect-1-1'>
                     <div className='p3'>
                         <Link to={`/stories/${story.slug}`}>
-                            <img className='col-12 block' src={util.try(() => story.acf.listing_image.url)} alt=""/>
+                            <Image src={util.try(() => story.acf.listing_image.url)}/>
                         </Link>
                     </div>
                 </div>
             )
         }
         return (
-            <div className='relative height-100 mx3'>
-
+            <div className='relative height-100 mxn4'>
                 {stories}
             </div>
         )

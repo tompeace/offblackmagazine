@@ -43,7 +43,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className='z1 relative clearfix'>
-                <div style={{height: '75px'}} className="col-12"></div>
+                <div style={{height: '67px'}} className="col-12"></div>
                 <div>
                     <div className={`z1 fixed left-0 right-0 top-0 ${this.state.menuActive ? 'bottom-0' :''}`}>
                         <div className="bg-white mr3 ml3 mt3 p2 border border-black line-height-2">
@@ -58,7 +58,7 @@ class Header extends React.Component {
                                     <ul className='list-reset m0'>
                                         <li className='border-bottom'><Link className='m3 block' to='/'>Home</Link></li>
                                         <li className='border-bottom'><Link className='m3 block' to='/stories'>Stories</Link></li>
-                                        <li className='border-bottom'><Link className='m3 block' to='/about'>About</Link></li>
+                                        <li><Link className='m3 block' to='/about'>About</Link></li>
                                     </ul>
                                 </nav>
                             </div>

@@ -77,7 +77,7 @@ class Image extends React.Component {
                 image = (
                     <img
                         ref='image'
-                        className={'col-12 ' + classes}
+                        className={'block col-12 ' + classes}
                         style={style}
                         src={this.props.src}
                         alt={this.props.alt} />
@@ -100,4 +100,4 @@ class Image extends React.Component {
 
 };
 
-module.exports = Image;
+export default Image;
