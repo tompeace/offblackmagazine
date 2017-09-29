@@ -13,7 +13,7 @@ class Home extends React.Component {
                         <div className="col col-6 border-left border-black sm-show overflow-hidden">
                             <Carousel
                                 interval={2100}
-                                className=''
+                                className='height-100'
                                 items={[
                                     {src: './build/images/OB_left-01.jpg', format: 'jpg'},
                                     {src: './build/images/OB_left-02.jpg', format: 'jpg'},
@@ -33,7 +33,7 @@ class Home extends React.Component {
                         <div className='mln1px col col-12 sm-col-6 overflow-hidden height-100 bg-white'>
                             <Carousel
                                 interval={2700}
-                                className='max-width-100 max-height-100'
+                                className='height-100'
                                 items={[
                                     {src: './build/images/OB_right-01.jpg', format: 'jpg'},
                                     {src: './build/images/OB_right-02-03.jpg', format: 'jpg'},

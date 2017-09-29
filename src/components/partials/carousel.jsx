@@ -1,5 +1,8 @@
 import React from 'react'
+import Image from './image.jsx'
 import util from '../utilities'
+
+
 class Carousel extends React.Component {
 
     constructor() {
@@ -38,7 +41,7 @@ class Carousel extends React.Component {
                 case 'jpg' :
                 case 'gif' :
                     component = (
-                        <img
+                        <Image
                             className={`${this.props.imgClassName} ${this.props.borderClass} ${hide}`}
                             src={item.src} />
                     )

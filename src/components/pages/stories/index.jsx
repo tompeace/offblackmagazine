@@ -8,20 +8,6 @@ import API from '../../api'
 
 // Container for Stories listing page
 class ListingContainer extends React.Component {
-    // constructor() {
-    //     super()
-    //     this.state = {
-    //         stories: []
-    //     }
-    // }
-    //
-    // componentDidMount() {
-    //     fetch('http://offblackmagazine.com/dev/wp-json/wp/v2/posts')
-    //         .then((data) => data.json())
-    //         .then((posts) => {
-    //             this.setState({stories: posts}, () => console.log('stories', this.state.stories))
-    //         })
-    // }
 
     render() {
         // The FullRoster iterates over all of the players and creates
@@ -29,7 +15,7 @@ class ListingContainer extends React.Component {
 
         if (this.props.stories.length > 0) {
             return (
-                <main className='relative height-100 mx3'>
+                <main className='relative height-100 mx1'>
                     <Switch>
                         <Route exact path='/stories' render={(props) => (
                             <Listing stories={this.props.stories}/>

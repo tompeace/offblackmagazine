@@ -32,7 +32,9 @@ class Main extends React.Component {
                 <Header />
                 <Switch>
                     <Route exact path='/' component={Home}/>
-                    <Route path='/stories' render={(props) => (<Stories stories={this.state.stories}/>)} />
+                    <Route path='/stories' render={(props) => (
+                        <Stories stories={this.state.stories}/>
+                    )} />
                     <Route path='/about' component={About}/>
                 </Switch>
                 <div style={{height: '67px'}} className="col-12"></div>

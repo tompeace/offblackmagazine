@@ -55,6 +55,7 @@ class Image extends React.Component {
 
     handleOnLoad() {
         if (this.props.hasLoaded) {
+            console.log('image loaded:', this.props.src);
             this.props.hasLoaded();
         }
 

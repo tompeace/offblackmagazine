@@ -1,11 +1,36 @@
 import React from 'react'
+import Link from 'react-router-dom'
 
-export default class Menu extends React.Component {
+// Router Menu
+// (
+//     <div className="mt3 mr3 bg-white border col-right col-6">
+//         <nav className=''>
+//             <ul className='list-reset m0'>
+//                 <li className='border-bottom'><Link className='m3 block' to='/'>Home</Link></li>
+//                 <li className='border-bottom'><Link className='m3 block' to='/stories'>Stories</Link></li>
+//                 <li><Link className='m3 block' to='/about'>About</Link></li>
+//             </ul>
+//         </nav>
+//     </div>
+// )
+
+
+class Menu extends React.Component {
 
     render() {
         return (
             <div className='max-width-100 max-height-100 bg-white'>
+
                 <div>
+                    <div className='p2 border-bottom border-black'>Stories</div>
+                    <div className='p2'>
+                        <Link className='m3 block' to='/stories'>Stories</Link>
+                    </div>
+                    <div className='p2'>
+                        <a href="http://offblackmagazine.com/issues/man-made/">
+                            man-made
+                        </a>
+                    </div>
                     <div className='p2 border-bottom border-black'>Issues</div>
                     <div className='p2'>
                         <a href="http://offblackmagazine.com/issues/the-future-is-theirs/">
@@ -54,3 +79,5 @@ export default class Menu extends React.Component {
         )
     }
 }
+
+export default Menu

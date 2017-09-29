@@ -146,14 +146,10 @@ gulp.task('watch', ['react', 'styles', 'images', 'fonts'], () => {
 gulp.task('server', ['watch'], () => {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
+            browser: "google chrome"
         }
     });
-    // const server = nodemon({
-    //     script: 'index.html',
-    //     ext: 'js jsx html',
-    //     verbose: false
-    // });
 });
 
 // build
