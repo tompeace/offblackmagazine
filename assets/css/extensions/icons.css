@@ -1,0 +1,51 @@
+/*
+ * Icons
+ */
+
+.icon-arrow-up,
+.icon-arrow-down,
+.icon-arrow-left,
+.icon-arrow-right {
+    display: inline-block;
+    height: 8.5px;
+    width: 14px;
+    transform-origin: 50% 50%;
+}
+
+.icon-arrow-up > .line,
+.icon-arrow-down > .line,
+.icon-arrow-left > .line,
+.icon-arrow-right > .line {
+    display: block;
+    width: 8.5px;
+    height: 1px;
+}
+
+.icon-arrow-up > .line:nth-child(1),
+.icon-arrow-down > .line:nth-child(1),
+.icon-arrow-left > .line:nth-child(1),
+.icon-arrow-right > .line:nth-child(1) {
+    transform: translateY(3px) rotate(45deg);
+}
+
+.icon-arrow-up > .line:nth-child(2),
+.icon-arrow-down > .line:nth-child(2),
+.icon-arrow-left > .line:nth-child(2),
+.icon-arrow-right > .line:nth-child(2) {
+    transform: translateY(2px) translateX(5.5px) rotate(135deg);
+}
+
+.icon-arrow-up {
+    transform: rotate(180deg);
+    transform-origin: 50% 32%;
+}
+
+.icon-arrow-left {
+    transform: rotate(90deg);
+    transform-origin: 48% 28%;
+}
+
+.icon-arrow-right {
+    transform: rotate(270deg);
+    transform-origin: 48% 33%;
+}

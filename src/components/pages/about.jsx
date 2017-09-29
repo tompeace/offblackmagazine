@@ -1,4 +1,4 @@
-const Events = () => (
+const About = () => (
   <div>
     <ul>
       <li>OFFBLACKMAGAZINE launch</li>
@@ -8,4 +8,4 @@ const Events = () => (
   </div>
 )
 
-export default Events
+export default About

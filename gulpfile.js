@@ -1,14 +1,34 @@
-/*
- * Bletchley Park build process
- */
-
 const gulp = require('gulp');
+const Path = require('path');
+const browserSync = require('browser-sync').create();
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const gulpif = require('gulp-if');
 const flatten = require('gulp-flatten');
-const browserSync = require('browser-sync');
+const uglify = require('gulp-uglify');
+const streamify = require('gulp-streamify');
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const literalify = require('literalify');
+const babelify = require('babelify');
+const babelEs2015 = require('babel-preset-env');
+const babelReact = require('babel-preset-react');
+const deamdify = require('deamdify');
+const postcss = require('gulp-postcss');
+const postcssImport = require('postcss-import');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const customProperties = require('postcss-custom-properties');
+const customMedia = require('postcss-custom-media');
+const calc = require('postcss-calc');
+
+
+const dev = true;
 
 const config = {
     styles: {
-        dev: true,
+        dev: dev,
         src: './assets/css/index.css',
         dest: './build/css',
         postcss: {},
@@ -25,7 +45,7 @@ const config = {
         dest: './build/images'
     },
     react: {
-        dev: true,
+        dev: dev,
         src: './src/',
         dest: './build/js',
         watch: './src/**/*',
@@ -36,32 +56,104 @@ const config = {
     }
 };
 
-// Tasks
+/**
+ * React
+ */
+gulp.task('react', () => {
+    const b = browserify({
+        entries: [Path.join(process.cwd(), config.react.src, 'index.js')],
+        debug: dev
+    });
+    const bundle = function() {
+        return b.bundle()
+        .pipe(source('index.js'))
+        .pipe(buffer())
+        .pipe(gulpif(!dev, streamify(uglify())))
+        .pipe(gulp.dest(config.react.dest));
+    };
+    b.transform(babelify, {
+        presets: [
+            require('babel-preset-env'),
+            require('babel-preset-react')
+        ]
+    });
+    b.transform(deamdify);
+    b.transform(
+        {global: true},
+        literalify.configure(config.react.literalify)
+    );
+    b.on('update', bundle);
+    b.on('err', (err) => {
+        console.log(err);
+        this.emit('end');
+    });
+    bundle();
+});
 
-gulp.task('browser-sync', () => {
+/**
+ * Styles
+ */
+gulp.task('styles', () => {
+    let processors = [
+        postcssImport(),
+        customProperties(),
+        customMedia(),
+        calc(),
+        autoprefixer(config.styles.autoprefixer)
+    ];
+    if (!dev) {
+        processors.push(cssnano());
+    }
+    return gulp.src(Path.join(process.cwd(), config.styles.src))
+        .pipe(postcss(processors))
+        .pipe(gulp.dest(config.styles.dest));
+});
+
+
+/**
+ * Images
+ */
+gulp.task('images', () => {
+    return gulp.src(Path.join(process.cwd(), config.images.src, '**/*'))
+        .pipe(flatten())
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest(config.images.dest));
+});
+
+
+gulp.task('fonts', () => {
+    return gulp.src(config.fonts.src)
+    .pipe(flatten())
+    .pipe(gulp.dest(config.fonts.dest));
+});
+
+// watch
+gulp.task('watch', ['react', 'styles', 'images', 'fonts'], () => {
+    gulp.watch('./assets/css/**/*.css', ['styles']);
+    gulp.watch(config.react.watch + '{*.js,*.jsx,**/*.js,**/*.jsx}', ['react'])
+    gulp.watch(config.fonts.src, ['fonts']);
+    gulp.watch(config.images.src + '/**/*.{jpg,png,gif}', ['images']);
+});
+
+
+/**
+ * Server
+ */
+gulp.task('server', ['watch'], () => {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-});
-
-require('bva-gulp-styles')(gulp, config.styles);
-require('bva-gulp-react')(gulp, config.react);
-require('bva-gulp-images')(gulp, config.images);
-
-// watch
-gulp.task('watch', () => {
-    gulp.watch('./assets/css/**/*.css', ['styles']);
-    gulp.watch(config.react.watch + '{*.js,*.jsx,**/*.js,**/*.jsx}', ['react']);
-    gulp.watch(config.fonts.src, ['fonts']);
-    gulp.watch(config.images.src + '/**/*.{jpg,png,gif}', ['images']);
-});
-
-gulp.task('fonts', () => {
-    return gulp.src(config.fonts.src)
-        .pipe(flatten())
-		.pipe(gulp.dest(config.fonts.dest));
+    // const server = nodemon({
+    //     script: 'index.html',
+    //     ext: 'js jsx html',
+    //     verbose: false
+    // });
 });
 
 // build

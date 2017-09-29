@@ -1,0 +1,162 @@
+/*
+ * Layout
+ */
+
+.height-100 {
+    height: 100%;
+}
+
+
+.not-empty {
+    height: 1px;
+    min-height: 1px;
+}
+
+ /* Responsive Display */
+
+.sm-show { display: none; }
+.md-show { display: none; }
+.lg-show { display: none; }
+
+@media (--breakpoint-sm) {
+    .sm-show { display: block; }
+}
+
+@media (--breakpoint-md) {
+    .md-show { display: block; }
+}
+
+@media (--breakpoint-lg) {
+    .lg-show { display: block; }
+}
+
+/* Reset */
+
+ table {
+     border-collapse: collapse;
+ }
+
+ td {
+     padding: 0;
+ }
+
+ tr {
+     padding: 0;
+ }
+
+/* Position */
+
+.sticky {
+    position: sticky;
+}
+@media (--breakpoint-sm) {
+    .sm-sticky {
+        position: sticky;
+    }
+}
+@media (--breakpoint-md) {
+    .md-sticky {
+        position: sticky;
+    }
+}
+@media (--breakpoint-lg) {
+    .lg-sticky {
+        position: sticky;
+    }
+}
+
+@media (--breakpoint-sm) {
+    .sm-relative {
+        position: relative;
+    }
+}
+
+/* Width */
+
+.max-width-768 {
+    max-width: 768px;
+}
+
+.width-auto {
+    width: auto;
+}
+
+
+/* Height */
+
+.height-0 {
+    height: 0;
+}
+.height-auto {
+    height: auto;
+}
+
+
+@media (--breakpoint-sm) {
+    .sm-height-0 {
+        height: 0;
+    }
+    .sm-height-auto {
+        height: auto;
+    }
+}
+
+@media (--breakpoint-md) {
+    .md-height-0 {
+        height: 0;
+    }
+    .md-height-auto {
+        height: auto;
+    }
+}
+
+@media (--breakpoint-lg) {
+    .lg-height-0 {
+        height: 0;
+    }
+    .lg-height-auto {
+        height: auto;
+    }
+}
+
+/* Positions */
+
+.translate-up-50 {
+    transform: translateY(-50%);
+}
+.translate-down-50 {
+    transform: translateY(50%);
+}
+
+@media (--breakpoint-sm) {
+    .sm-top-auto {
+        top: auto;
+    }
+    .sm-bottom-auto {
+        bottom: auto;
+    }
+}
+
+/* Table */
+
+.table-row {
+    display: table-row;
+}
+
+.table-layout-fixed {
+    table-layout: fixed;
+}
+
+@media (--breakpoint-sm) {
+    .sm-table-cell {
+        display: table-cell;
+    }
+}
+
+/* Overflow */
+
+@media (--breakpoint-sm) {
+    .sm-overflow-auto {
+        overflow: auto;
+    }
+}

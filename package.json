@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run build && gulp && gulp browser-sync"
   },
   "repository": {
     "type": "git",
@@ -17,19 +18,42 @@
   },
   "homepage": "https://github.com/tompeace/offblackmagazine#readme",
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "bva-gulp-images": "git+ssh://git@codebasehq.com:bureau/bva-core/bva-gulp-images.git#v0.0.1",
-    "bva-gulp-react": "git+ssh://git@codebasehq.com:bureau/bva-core/bva-gulp-react.git#v0.0.3",
-    "bva-gulp-styles": "git+ssh://git@codebasehq.com:bureau/bva-core/bva-gulp-styles.git#v0.0.2",
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "basscss": "^8.0.3",
+    "basscss-addons": "^1.0.0",
+    "browser-sync": "^2.18.13",
+    "browserify": "^14.4.0",
+    "cssnano": "^3.10.0",
+    "deamdify": "^0.3.0",
+    "getconfig": "^3.1.0",
     "gulp": "^3.9.1",
     "gulp-flatten": "^0.3.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "literalify": "^0.4.0",
     "nodemon": "^1.12.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "normalize.css": "^7.0.0",
+    "picturefill": "^3.0.2",
+    "postcss-calc": "^6.0.0",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.1.0",
+    "postcss-import": "^11.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
     "whatwg-fetch": "^2.0.3"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.13"
   }
 }

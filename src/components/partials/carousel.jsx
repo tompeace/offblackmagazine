@@ -1,5 +1,5 @@
 import React from 'react'
-
+import util from '../utilities'
 class Carousel extends React.Component {
 
     constructor() {
@@ -10,7 +10,13 @@ class Carousel extends React.Component {
     }
 
     componentDidMount() {
-        setInterval(this.tick.bind(this), this.props.interval || 1000);
+        if (util.try(()=> this.props.items)) {
+            this.interval = setInterval(this.tick.bind(this), this.props.interval || 1000);
+        }
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval)
     }
 
     tick() {
@@ -24,7 +30,8 @@ class Carousel extends React.Component {
     }
 
     render() {
-        let items = this.props.items.map((item, i) => {
+
+        let items = util.try(() => this.props.items.map((item, i) => {
             let component
             const hide = this.state.index === i ? '' : 'hide'
             switch (item.format) {
@@ -32,7 +39,7 @@ class Carousel extends React.Component {
                 case 'gif' :
                     component = (
                         <img
-                            className={`${this.props.imgClassName} ${this.props.borderClass} max-height-100 ${hide}`}
+                            className={`${this.props.imgClassName} ${this.props.borderClass} ${hide}`}
                             src={item.src} />
                     )
                     break;
@@ -54,7 +61,7 @@ class Carousel extends React.Component {
                 case 'svg':
                     component = (
                         <object
-                            className={`${this.props.imgClassName} ${this.props.borderClass} p0 max-height-100 ${hide}`}
+                            className={`${this.props.imgClassName} ${this.props.borderClass} p ${hide}`}
                             data={item.src}
                             width='100%'
                             height='100%'
@@ -68,11 +75,11 @@ class Carousel extends React.Component {
 
             }
             return (
-                <div className='relative overflow-hidden max-height-100' key={i}>
+                <div className='' key={i}>
                     {component}
                 </div>
             )
-        })
+        }))
 
         return (
             <div className={this.props.className || ''}>

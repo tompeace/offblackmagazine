@@ -1,4 +1,43 @@
-@import 'bva-gulp-styles';
+/**
+ * Styles
+ */
+
+@import 'normalize.css';
+
+@import 'basscss';
+@import 'basscss-addons/modules/responsive-margin';
+@import 'basscss-addons/modules/responsive-padding';
+@import 'basscss-addons/modules/media-object';
+@import 'basscss-addons/modules/all';
+@import 'basscss-addons/modules/forms';
+@import 'basscss-addons/modules/input-range';
+@import 'basscss-addons/modules/progress';
+@import 'basscss-addons/modules/btn';
+@import 'basscss-addons/modules/btn-primary';
+@import 'basscss-addons/modules/btn-outline';
+@import 'basscss-addons/modules/btn-sizes';
+@import 'basscss-addons/modules/colors';
+@import 'basscss-addons/modules/background-colors';
+@import 'basscss-addons/modules/border-colors';
+@import 'basscss-addons/modules/darken';
+@import 'basscss-addons/modules/lighten';
+@import 'basscss-addons/modules/background-images';
+
+
+/*@import 'extensions/borders';
+@import 'extensions/colours';
+@import 'extensions/icons';
+@import 'extensions/layout';
+@import 'extensions/type';*/
+
+@import 'extensions/spaces';
+
+@custom-media --breakpoint-sm (min-width: 760px);
+@custom-media --breakpoint-sm-md (min-width: 760px);
+@custom-media --breakpoint-md (min-width: 1100px);
+@custom-media --breakpoint-md-lg (min-width: 1100px);
+@custom-media --breakpoint-lg (min-width: 1440px);
+
 
 :root {
     --space-1: 10px;
@@ -10,11 +49,6 @@
     --border-color: black;
 }
 
-@custom-media --breakpoint-sm (min-width: 668px); /* Tablet */
-@custom-media --breakpoint-sm-md (min-width: 668px);
-@custom-media --breakpoint-md (min-width: 1023px); /* Tablet landscape / small desktop */
-@custom-media --breakpoint-md-lg (min-width: 1023px);
-@custom-media --breakpoint-lg (min-width: 1280px); /* Large desktop */
 
 @font-face {
     font-family: "akzidenz";
@@ -247,17 +281,6 @@ pre, .pre {
 
 .max-width-100 {
     max-width: 100%;
-}
-
-/** {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}*/
-
-body{
-  height: 100vh;
-  overflow-y: hidden;
 }
 
 .table {
