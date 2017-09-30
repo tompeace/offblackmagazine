@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm run build && gulp && gulp browser-sync"
+    "build": "gulp",
+    "watch": "gulp server"
   },
   "repository": {
     "type": "git",
@@ -42,7 +43,6 @@
     "gulp-uglify": "^3.0.0",
     "imagemin-pngquant": "^5.0.1",
     "literalify": "^0.4.0",
-    "nodemon": "^1.12.1",
     "normalize.css": "^7.0.0",
     "picturefill": "^3.0.2",
     "postcss-calc": "^6.0.0",
