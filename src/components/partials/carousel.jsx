@@ -37,7 +37,9 @@ class Carousel extends React.Component {
         let items = util.try(() => this.props.items.map((item, i) => {
             let component
             const hide = this.state.index === i ? '' : 'hide'
-            switch (item.format) {
+            const format = item.format.split('.').pop();
+
+            switch (format) {
                 case 'jpg' :
                 case 'gif' :
                     component = (
