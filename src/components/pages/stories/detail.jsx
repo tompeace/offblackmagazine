@@ -26,7 +26,7 @@ class StoryDetail extends React.Component {
                 <div className={`${i !== 0 ? 'pt3' : ''} relative clearfix`}>
                     <div className={`${float} ${width}`}>
                         <Image src={item.image.url} />
-                        <div className="absolute col-7 bottom-0 right-0 mb3 mr3 p2 border bold">
+                        <div className="absolute col-7 bottom-0 right-0 mb3 mr3 p2 border bold bg-white">
                             <div>{item.image.filename}</div>
                         </div>
                     </div>

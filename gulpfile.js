@@ -146,9 +146,9 @@ gulp.task('watch', ['react', 'styles', 'images', 'fonts'], () => {
 gulp.task('server', ['watch'], () => {
     browserSync.init({
         server: {
-            baseDir: "./",
-            browser: "google chrome"
-        }
+            baseDir: "./"
+        },
+        browser: "google chrome"
     });
 });
 

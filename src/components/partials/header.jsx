@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'react-router-dom'
 import Menu from './menu.jsx'
 
 class Header extends React.Component {
@@ -29,7 +29,9 @@ class Header extends React.Component {
                                 onClick={this.handleToggle}
                                 className="right">Menu</span>
                         </div>
-                        {this.state.menuActive && <Menu />}
+                        {this.state.menuActive && (
+                            <Menu />
+                        )}
                     </div>
                     <div className='marquee z1 bg-white mr3 ml3 mb3 py2 fixed bottom-0 left-0 right-0 border border-black overflow-hidden line-height-2'>
                         <div className='marquee'>
