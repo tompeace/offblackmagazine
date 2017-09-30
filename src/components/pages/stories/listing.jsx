@@ -65,7 +65,7 @@ class ListingPage extends React.Component {
             }
         }
         return (
-            <div className='relative height-100'>
+            <div className='relative height-100 container--stories'>
                 {stories}
             </div>
         )
