@@ -69,3 +69,7 @@
 .border-lighten-1 { border-color: var(--lighten-1); }
 .border-lighten-2 { border-color: var(--lighten-2); }
 .border-lighten-3 { border-color: var(--lighten-3); }
+
+.red{
+  color: #e00505;
+}

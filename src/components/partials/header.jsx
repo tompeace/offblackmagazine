@@ -27,17 +27,19 @@ class Header extends React.Component {
                             Anthology Issue A/W 2017
                             <span
                                 onClick={this.handleToggle}
-                                className="right">Menu</span>
+                                className="right skew-hover">Menu</span>
                         </div>
                         {this.state.menuActive && (
                             <Menu />
                         )}
                     </div>
-                    <div className='marquee z1 bg-white mr3 ml3 mb3 py2 fixed bottom-0 left-0 right-0 border border-black overflow-hidden line-height-2'>
-                        <div className='marquee'>
-                            <span>COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
-                        </div>
-                    </div>
+                    {/*
+                      <div className='marquee z1 bg-white mr3 ml3 mb3 py2 fixed bottom-0 left-0 right-0 border border-black overflow-hidden line-height-2'>
+                          <div className='marquee'>
+                              <span>COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON COMING SOON</span>
+                          </div>
+                      </div>
+                    */}
                 </div>
 
             </header>

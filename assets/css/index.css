@@ -61,6 +61,11 @@
     src: url("../fonts/akzidenz.woff") format("woff");
 }
 
+@font-face {
+    font-family: "helvetica condensed";
+    src: url("../fonts/HelveticaNeue-CondensedBold.woff") format("woff");
+}
+
 html {
     font-size: 20px;
     height: 100%;
@@ -78,9 +83,9 @@ body {
     width: 100%;
     font-size: 1rem;
     font-family: "akzidenz", Helvetica, Arial, sans-serif;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 15.4px;
+	  font-variant: normal;
+	  font-weight: 400;
+	  line-height: 1.4;
 }
 
 .container {
@@ -232,6 +237,72 @@ pre, .pre {
     100% { transform: translate(-100%, 0); }
 }
 
-.transition-opacity {
-    transition: opacity .3s cubic-bezier(.45,.65,.34,.96);
+.title-story-credit{
+  font-family: 'helvetica condensed', sans-serif !important;
+  color: #e00505;
+  margin-top: 90px;
+  text-transform: uppercase;
+  margin-left: 18px;
+  z-index: -1;
+}
+
+.title-story-credit h1,
+.title-story-credit h2{
+  font-size: 38px !important;
+  line-height: .9;
+  font-family: 'helvetica condensed', sans-serif !important;
+}
+
+.container--story-items{
+  margin-top: 110px;
+}
+
+.col-right .image-credit{
+  margin-left: -1px;
+}
+
+@-webkit-keyframes skew {
+  0%   { -webkit-transform: skew(35deg); }
+  100% { -webkit-transform: skew(0); }
+}
+@-moz-keyframes skew {
+  0%   { -moz-transform: skew(35deg); }
+  100% { -moz-transform: skew(0); }
+}
+@-o-keyframes skew {
+  0%   { -o-transform: skew(35deg); }
+  100% { -o-transform: skew(0); }
+}
+@keyframes skew {
+  0%   { transform: skew(35deg); }
+  100% { transform: skew(0); }
+}
+
+.skew{
+  -webkit-animation: skew 1.1s ease-in-out;
+  -moz-animation:    skew 1.1s ease-in-out;
+  -o-animation:      skew 1.1s ease-in-out;
+  animation:         skew 1.1s ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.skew-hover{
+  -webkit-transform: skew(0);
+     -moz-transform: skew(0);
+       -o-transform: skew(0);
+          transform: skew(0);
+
+          -webkit-transition: -webkit-transform 0.5s ease-in-out;
+             -moz-transition: -moz-transform 0.5s ease-in-out;
+                  transition: transform 0.5s ease-in-out;
+}
+.skew-hover:hover{
+  -webkit-transform: skew(-20deg);
+     -moz-transform: skew(-20deg);
+       -o-transform: skew(-20deg);
+          transform: skew(-20deg);
+
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+     -moz-transition: -moz-transform 0.3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
 }
