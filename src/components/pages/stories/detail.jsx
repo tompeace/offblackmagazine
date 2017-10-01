@@ -45,12 +45,6 @@ class StoryDetail extends React.Component {
                 <div className="relative col-9">
 
                     {/*
-                    <div className="aspect-1-1">
-                    <Image src={this.props.acf.listing_image.sizes['twentyseventeen-featured-image']} />
-                    </div>
-                    */}
-
-                    {/*
                       TODO: Make Title Story Credit in HelveticaNeue-CondensedBold
                     */}
                     <div className="fixed col-12 top-0 left-0 red title-story-credit skew">

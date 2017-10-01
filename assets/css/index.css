@@ -279,32 +279,17 @@ pre, .pre {
 }
 
 .skew{
-  -webkit-animation: skew 1.1s ease-in-out;
-  -moz-animation:    skew 1.1s ease-in-out;
-  -o-animation:      skew 1.1s ease-in-out;
   animation:         skew 1.1s ease-in-out;
   animation-iteration-count: 1;
 }
 
 .skew-hover{
-  -webkit-transform: skew(0);
-     -moz-transform: skew(0);
-       -o-transform: skew(0);
-          transform: skew(0);
-
-          -webkit-transition: -webkit-transform 0.5s ease-in-out;
-             -moz-transition: -moz-transform 0.5s ease-in-out;
-                  transition: transform 0.5s ease-in-out;
+    transform: skew(0);
+    transition: transform 0.5s ease-in-out;
 }
 .skew-hover:hover{
-  -webkit-transform: skew(-20deg);
-     -moz-transform: skew(-20deg);
-       -o-transform: skew(-20deg);
-          transform: skew(-20deg);
-
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-     -moz-transition: -moz-transform 0.3s ease-in-out;
-          transition: transform 0.3s ease-in-out;
+    transform: skew(-20deg);
+    transition: transform 0.3s ease-in-out;
 }
 
 .container--stories{

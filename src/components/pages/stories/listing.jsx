@@ -14,26 +14,23 @@ class ListingPage extends React.Component {
 
     render() {
         const PROB = 2
-        const items = this.props.stories.length * PROB - 1
-
-        const getRandom = () => Math.floor(Math.random() * (PROB - 0));
+        const getRandom = () => Math.floor(Math.random() * PROB);
 
         let story
         let stories = []
         let storyCounter = 0
 
-        for (var i = 0; i < items; i++) {
+        while (storyCounter < this.props.stories.length) {
             const randomInt = getRandom()
             switch (randomInt) {
                 case 0:
                     story = this.props.stories[storyCounter]
-                    console.log(story);
-                    stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1'>
-                            <div className='p3'>
+                    stories.push(
+                        <div className='clearfix col col-4 sm-col-2 '>
+                            <div className='p3 aspect-1-1'>
                                 <Link to={`/stories/${story.slug}`}>
                                     <Image
-                                        className=''
+                                        className='absolute'
                                         src={util.try(() => story.acf.listing_image.url)}/>
                                 </Link>
                             </div>
@@ -42,9 +39,9 @@ class ListingPage extends React.Component {
                     storyCounter++
                     break;
                 case 1:
-                    stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1'>
-                            <div className='p3'>
+                    stories.push(
+                        <div className='clearfix col col-4 sm-col-2'>
+                            <div className='p3 aspect-1-1 overflow-hidden'>
                                 <Image
                                     className='border'
                                     src={util.try(() => './build/images/background_cross.png')}/>
@@ -53,19 +50,19 @@ class ListingPage extends React.Component {
                     )
                     break;
                 case 2:
-                    stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1'></div>
+                    stories.push(
+                        <div className='clearfix col col-4 sm-col-2 aspect-1-1'></div>
                     )
                     break;
                 default:
-                    console.log('randomInt not handled:', randomInt);
-                    stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1 not-empty'></div>
+                    stories.push(
+                        <div className='clearfix col col-4 sm-col-2 aspect-1-1 not-empty'></div>
                     )
             }
         }
+
         return (
-            <div className='relative height-100 container--stories'>
+            <div className='relative height-100 px4 mx2'>
                 {stories}
             </div>
         )
