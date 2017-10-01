@@ -29,8 +29,8 @@ class ListingPage extends React.Component {
                     story = this.props.stories[storyCounter]
                     console.log(story);
                     stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1'>
-                            <div className='p3'>
+                        <div className='clearfix col col-2 p3'>
+                            <div>
                                 <Link to={`/stories/${story.slug}`}>
                                     <Image
                                         className=''
@@ -43,7 +43,7 @@ class ListingPage extends React.Component {
                     break;
                 case 1:
                     stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1'>
+                        <div className='clearfix col col-2'>
                             <div className='p3'>
                                 <Image
                                     className='border'
@@ -54,13 +54,13 @@ class ListingPage extends React.Component {
                     break;
                 case 2:
                     stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1'></div>
+                        <div className='clearfix col col-2 not-empty aspect-1-1'></div>
                     )
                     break;
                 default:
                     console.log('randomInt not handled:', randomInt);
                     stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1 not-empty'></div>
+                        <div className='clearfix col col-2 not-empty'></div>
                     )
             }
         }
