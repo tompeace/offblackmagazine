@@ -23,32 +23,33 @@ class StoryDetail extends React.Component {
             }
 
             return (
-                <div className={`${i !== 0 ? 'pt3' : ''} relative clearfix`}>
-                    <div className={`${float} ${width}`}>
+                <div className={`${float} ${width}`}>
+                    <div>
                         <Image src={item.image.url} />
-                        <div className="absolute col-7 bottom-0 right-0 mb3 mr3 p2 border bold bg-white">
-                            <div>{item.image.filename}</div>
+                        <div className="col-12 box-sizing">
+                            <div className="col-12 mt3 mb3 mr-auto ml-auto p2 border bold bg-white border-box image-credit">
+                              {item.image.filename}
+                            </div>
                         </div>
                     </div>
                 </div>
             )
         }))
 
+        // TODO: Remove Back link and add prev and next story links
+        // TODO: Make Title Story Credit in HelveticaNeue-CondensedBold
         return (
             <div className="py3">
                 <div className="relative col-9">
-                    <div className="aspect-1-1">
-                    <Image src={this.props.acf.listing_image.sizes['twentyseventeen-featured-image']} />
-                    </div>
-                    <div className="absolute col-7 top-0 left-0 mt3 ml3 p2 red border border-red">
+                    <div className="fixed col-12 top-0 left-0 red title-story-credit skew">
                         <h1>{this.props.title.rendered}</h1>
                         <h2 dangerouslySetInnerHTML={{__html: this.props.acf.title_credit}} />
                     </div>
                 </div>
-                <div className="container pt3">
+                <div className="container container--story-items pt3">
                     {items}
                 </div>
-                <div className='h1 pt3'>
+                <div className='col-12 relative clearfix'>
                     <Link to='/stories'>Back</Link>
                 </div>
             </div>
