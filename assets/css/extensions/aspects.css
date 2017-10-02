@@ -1,7 +1,6 @@
 /* Aspect Ratios */
 
 .aspect-1-1,
-.aspect-1-2,
 .aspect-4-3,
 .aspect-3-2,
 .aspect-16-9,
@@ -11,7 +10,6 @@
 }
 
 .aspect-1-1:after,
-.aspect-1-2:after,
 .aspect-4-3:after,
 .aspect-3-2:after,
 .aspect-16-9:after,
@@ -23,10 +21,6 @@
 
 .aspect-1-1:after {
     padding-top: 100%;
-}
-
-.aspect-1-2:after {
-    padding-top: 150%;
 }
 
 .aspect-4-3:after {
@@ -51,7 +45,6 @@
 
 @media (min-width: 668px) {
     .sm-aspect-1-1,
-    .sm-aspect-1-2,
     .sm-aspect-4-3,
     .sm-aspect-3-2,
     .sm-aspect-16-9,
@@ -60,7 +53,6 @@
         position: relative;
     }
     .sm-aspect-1-1:after,
-    .sm-aspect-1-2:after,
     .sm-aspect-4-3:after,
     .sm-aspect-3-2:after,
     .sm-aspect-16-9:after,
@@ -72,10 +64,6 @@
 
     .sm-aspect-1-1:after {
         padding-top: 100%;
-    }
-
-    .sm-aspect-1-2:after {
-        padding-top: 140%;
     }
 
     .sm-aspect-4-3:after {
@@ -101,7 +89,6 @@
 
 @media (min-width: 1023px) {
     .md-aspect-1-1,
-    .md-aspect-1-2,
     .md-aspect-4-3,
     .md-aspect-3-2,
     .md-aspect-16-9,
@@ -110,7 +97,6 @@
         position: relative;
     }
     .md-aspect-1-1:after,
-    .md-aspect-1-2:after,
     .md-aspect-4-3:after,
     .md-aspect-3-2:after,
     .md-aspect-16-9:after,
@@ -122,10 +108,6 @@
 
     .md-aspect-1-1:after {
         padding-top: 100%;
-    }
-
-    .md-aspect-1-2:after {
-        padding-top: 150%;
     }
 
     .md-aspect-4-3:after {

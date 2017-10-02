@@ -18,7 +18,7 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://offblackmagazine.com/dev/wp-json/wp/v2/posts/?filter[posts_per_page]=100')
+        fetch('http://offblackmagazine.com/dev/wp-json/wp/v2/posts')
             .then((data) => data.json())
             .then((posts) => {
                 this.setState({stories: posts}, () =>
@@ -28,7 +28,7 @@ class Main extends React.Component {
 
     render() {
         return (
-            <main className='height-100'>
+            <main>
                 <Header />
                 <Switch>
                     <Route exact path='/' component={Home}/>

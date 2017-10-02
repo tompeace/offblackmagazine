@@ -15,7 +15,7 @@ class ListingContainer extends React.Component {
 
         if (this.props.stories.length > 0) {
             return (
-                <main className='relative height-100 mx4'>
+                <main className='relative height-100 mx1'>
                     <Switch>
                         <Route exact path='/stories' render={(props) => (
                             <Listing stories={this.props.stories}/>
