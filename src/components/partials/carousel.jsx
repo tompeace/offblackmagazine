@@ -34,10 +34,10 @@ class Carousel extends React.Component {
 
     render() {
 
-        let items = util.try(() => this.props.items.map((item, i) => {
+        const items = util.try(() => this.props.items.map((item, i) => {
             let component
             const hide = this.state.index === i ? '' : 'hide'
-            const format = item.format.split('.').pop();
+            const format = item.src.split('.').pop();
 
             switch (format) {
                 case 'jpg' :
@@ -79,6 +79,7 @@ class Carousel extends React.Component {
                     component = <div className='height-100 col-12 crossed' />
 
             }
+
             return (
                 <div className='' key={i}>
                     {component}

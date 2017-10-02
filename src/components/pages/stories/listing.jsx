@@ -14,27 +14,24 @@ class ListingPage extends React.Component {
 
     render() {
         const PROB = 2
-        const items = this.props.stories.length * PROB - 1
-
-        const getRandom = () => Math.floor(Math.random() * (PROB - 0));
+        const getRandomInt = () => Math.floor(Math.random() * PROB);
 
         let story
         let stories = []
         let storyCounter = 0
+        let itemCounter = 0
 
-        for (var i = 0; i < items; i++) {
-            const randomInt = getRandom()
-            switch (randomInt) {
+        while (storyCounter < this.props.stories.length) {
+            switch (getRandomInt()) {
                 case 0:
                     story = this.props.stories[storyCounter]
-                    console.log(story);
-                    stories[i] = (
+                    stories.push(
                         <div className='clearfix col col-2 p3'>
-                            <div className=''>
+                            <div className='aspect-1-2 overflow-hidden'>
                                 <Link to={`/stories/${story.slug}`}>
                                     <Image
-                                        className=''
-                                        src={util.try(() => story.acf.listing_image.url)}/>
+                                        className='absolute'
+                                        src={util.try(() => story.acf.listing_image.url)} />
                                 </Link>
                             </div>
                         </div>
@@ -42,27 +39,41 @@ class ListingPage extends React.Component {
                     storyCounter++
                     break;
                 case 1:
-                    stories[i] = (
-                        <div className='clearfix col col-2'>
-                            <div className='p3'>
+                    stories.push(
+                        <div className='clearfix col col-2 p3'>
+                            <div className='aspect-1-2 overflow-hidden border'>
                                 <Image
-                                    className='border'
+                                    className='absolute'
                                     src={util.try(() => './build/images/background_cross.png')}/>
                             </div>
                         </div>
                     )
                     break;
-                // case 2:
-                //     stories[i] = (
-                //         <div className='clearfix col col-2 aspect-1-1'></div>
-                //     )
-                //     break;
+                case 2:
+                    stories.push(
+                        <div className='clearfix col col-2 p3'>
+                            <div className="absolute not-empty"></div>
+                        </div>
+                    )
+                    break;
                 default:
                     console.log('randomInt not handled:', randomInt);
-                    stories[i] = (
-                        <div className='clearfix col col-2 aspect-1-1 not-empty'></div>
+                    stories.push(
+                        <div className='clearfix col col-2 p3'>
+                            <div className="absolute not-empty"></div>
+                        </div>
                     )
             }
+
+            if (itemCounter % 5 === 0) {
+                console.log('clearfix at:', itemCounter);
+                stories.push(
+                    <div className='clearfix col col-2'>
+                        <div className="absolute not-empty"></div>
+                    </div>
+                )
+            }
+            itemCounter++
         }
         return (
             <div className='relative height-100'>
