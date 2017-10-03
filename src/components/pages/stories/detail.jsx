@@ -62,7 +62,7 @@ class StoryDetail extends React.Component {
                         </Link>
                         <Link className='right' to={`/stories/${this.props.nextPost}`}>
                             <span style={{
-                                    fontSize: '50px'
+                                    fontSize: '50px',
                                     textOrientation: 'sideways'
                                 }}>
                                 {'Next ⟶'}

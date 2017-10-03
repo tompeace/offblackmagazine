@@ -57,7 +57,7 @@ class Menu extends React.Component {
                             Double
                         </a>
                         <a
-                            src='/'
+                            src='http://offblackmagazine.com/archive/the-body'
                             className='block pb2 mb4 cursor-pointer line-through'
                             onClick={this.handleToggle}>
                             The Body
