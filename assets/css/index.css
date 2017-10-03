@@ -281,3 +281,17 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
 .card-listing-page{
   padding: 5px;
 }
+
+.line-through:hover {
+    text-decoration: line-through;
+}
+
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
+.v-centre{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%)
+}

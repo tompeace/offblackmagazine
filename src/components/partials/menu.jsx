@@ -12,7 +12,7 @@ class Menu extends React.Component {
         return (
             <div
                 style={{minHeight: 'calc(100vh - 110px)'}}
-                className="mt3 mr3 bg-white border col-right col-6">
+                className="mt3 mr3 bg-white border col-right col-12 sm-col-6">
                 <nav>
                     <div className='border-bottom p2'>
                         Issues
@@ -20,54 +20,54 @@ class Menu extends React.Component {
                     <div className="border-bottom p2">
                         <a
                             src='/'
-                            className='block pb2'
+                            className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
                             Anthology
                         </a>
                         <a
                             src='/'
-                            className='block pb2'
+                            className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
-                            <span style={{textDecoration: 'line-through'}}>
+                            <span style={{pointerEvents: 'none'}}>
                                 The Future is: Theirs
                             </span>
                         </a>
                         <a
                             src='/'
-                            className='block pb2'
+                            className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
                             Man Made
                         </a>
                         <a
                             src='/'
-                            className='block pb2'
+                            className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
                             Raw
                         </a>
                         <a
                             src='http://offblackmagazine.com/archive-cult'
-                            className='block pb2'
+                            className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
                             Cult
                         </a>
                         <a
                             src='/'
-                            className='block pb2'
+                            className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
                             Double
                         </a>
                         <a
                             src='/'
-                            className='block pb2 mb4'
+                            className='block pb2 mb4 cursor-pointer line-through'
                             onClick={this.handleToggle}>
                             The Body
                         </a>
                     </div>
                     <div className='border-bottom p2'>
-                        <a href="">About</a>
+                        <a className='cursor-pointer line-through' href="">About</a>
                     </div>
                     <div className='border-bottom p2'>
-                        <a href="">Contributors</a>
+                        <a className='cursor-pointer line-through' href="">Contributors</a>
                     </div>
                 </nav>
             </div>

@@ -49,7 +49,7 @@ class ListingContainer extends React.Component {
             )
         } else {
             return (
-                <div>
+                <div className='center col-12 v-centre'>
                     Loading...
                 </div>
             )
