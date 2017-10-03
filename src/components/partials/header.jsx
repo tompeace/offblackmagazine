@@ -32,7 +32,7 @@ class Header extends React.Component {
                             <Link className='cursor-pointer' to='/'>Anthology Issue A/W 2017</Link>
                             <span
                                 onClick={this.handleToggle}
-                                className='right'>
+                                className='right cursor-pointer'>
                                 {this.state.menuActive ? 'Close' :'Menu'}
                             </span>
                         </div>

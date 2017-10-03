@@ -295,3 +295,8 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
     top:50%;
     transform:translateY(-50%)
 }
+
+.inactive-link {
+    pointer-events: none;
+    text-decoration: line-through;
+}

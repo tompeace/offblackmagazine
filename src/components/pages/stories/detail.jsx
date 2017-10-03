@@ -21,26 +21,28 @@ class StoryDetail extends React.Component {
                 float = 'col-right'
             }
 
+            const credits = util.isArray(item.credits) && (
+                <div className="col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit">
+                    {item.credits.map((credit, i) => (
+                        <div className={`p2 ${i === item.credits.length - 1 ? '' : 'border-bottom'}`}>
+                            {credit.credit}
+                        </div>
+                    ))}
+                </div>
+            )
+            
             return (
                 <div className=''>
                     <div className={`${float} ${width}`}>
                         <Image src={item.image.url} />
                         <div className="col-12 box-sizing">
-                            <div className="col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit">
-                              {item.credits.map((credit, i) => (
-                                  <div className={`p2 ${i === item.credits.length - 1 ? '' : 'border-bottom'}`}>
-                                      {credit.credit}
-                                  </div>
-                              ))}
-                            </div>
+                            {credits}
                         </div>
                     </div>
                 </div>
             )
         }))
 
-        // TODO: Remove Back link and add prev and next story links
-        // TODO: Make Title Story Credit in HelveticaNeue-CondensedBold
         return (
             <div className="py3">
                 <div className="relative col-9">

@@ -20,54 +20,37 @@ class Menu extends React.Component {
                     <div className="border-bottom p2">
                         <a
                             src='/'
-                            className='block pb2 cursor-pointer line-through'
-                            onClick={this.handleToggle}>
-                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
-                                Anthology
-                            </span>
+                            className='block pb2 cursor-pointer line-through'>
+                            Anthology
                         </a>
                         <a
                             src='/'
-                            className='block pb2 cursor-pointer line-through'
-                            onClick={this.handleToggle}>
-                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
-                                The Future is: Theirs
-                            </span>
+                            className='block pb2 cursor-pointer line-through inactive-link'>
+                            The Future is: Theirs
                         </a>
                         <a
                             src='/'
-                            className='block pb2 cursor-pointer line-through'
-                            onClick={this.handleToggle}>
-                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
-                                Man Made
-                            </span>
+                            className='block pb2 cursor-pointer line-through inactive-link'>
+                            Man Made
                         </a>
                         <a
                             src='/'
-                            className='block pb2 cursor-pointer line-through'
-                            onClick={this.handleToggle}>
-                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
-                                Raw
-                            </span>
+                            className='block pb2 cursor-pointer line-through inactive-link'>
+                            Raw
                         </a>
                         <a
                             src='http://offblackmagazine.com/archive-cult'
-                            className='block pb2 cursor-pointer line-through'
-                            onClick={this.handleToggle}>
+                            className='block pb2 cursor-pointer line-through'>
                             Cult
                         </a>
                         <a
                             src='/'
-                            className='block pb2 cursor-pointer line-through'
-                            onClick={this.handleToggle}>
-                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
-                                Double
-                            </span>
+                            className='block pb2 cursor-pointer line-through inactive-link'>
+                            Double
                         </a>
                         <a
                             src='http://offblackmagazine.com/archive/the-body'
-                            className='block pb2 mb4 cursor-pointer line-through'
-                            onClick={this.handleToggle}>
+                            className='block pb2 mb4 cursor-pointer line-through'>
                             The Body
                         </a>
                     </div>
