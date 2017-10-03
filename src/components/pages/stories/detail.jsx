@@ -15,13 +15,16 @@ class StoryDetail extends React.Component {
             }
 
             let float
+            let container
             if (item.position === "Left") {
                 float = 'col'
             } else if (item.position === "Right") {
                 float = 'col-right'
+                container = 'clearfix'
             }
 
-            const credits = util.isArray(item.credits) && (
+            const credits = util.isArray(item.credits)
+            ? (
                 <div className="col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit">
                     {item.credits.map((credit, i) => (
                         <div className={`p2 ${i === item.credits.length - 1 ? '' : 'border-bottom'}`}>
@@ -29,10 +32,12 @@ class StoryDetail extends React.Component {
                         </div>
                     ))}
                 </div>
+            ) : (
+                <div className="col-12 mb3"></div>
             )
-            
+
             return (
-                <div className=''>
+                <div className={container}>
                     <div className={`${float} ${width}`}>
                         <Image src={item.image.url} />
                         <div className="col-12 box-sizing">
