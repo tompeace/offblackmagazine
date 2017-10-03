@@ -9,19 +9,19 @@
 @import 'basscss-addons/modules/responsive-padding';
 @import 'basscss-addons/modules/media-object';
 @import 'basscss-addons/modules/all';
-@import 'basscss-addons/modules/forms';
-@import 'basscss-addons/modules/input-range';
-@import 'basscss-addons/modules/progress';
-@import 'basscss-addons/modules/btn';
-@import 'basscss-addons/modules/btn-primary';
-@import 'basscss-addons/modules/btn-outline';
-@import 'basscss-addons/modules/btn-sizes';
+/*@import 'basscss-addons/modules/forms';*/
+/*@import 'basscss-addons/modules/input-range';*/
+/*@import 'basscss-addons/modules/progress';*/
+/*@import 'basscss-addons/modules/btn';*/
+/*@import 'basscss-addons/modules/btn-primary';*/
+/*@import 'basscss-addons/modules/btn-outline';*/
+/*@import 'basscss-addons/modules/btn-sizes';*/
 @import 'basscss-addons/modules/colors';
 @import 'basscss-addons/modules/background-colors';
-@import 'basscss-addons/modules/border-colors';
-@import 'basscss-addons/modules/darken';
-@import 'basscss-addons/modules/lighten';
-@import 'basscss-addons/modules/background-images';
+/*@import 'basscss-addons/modules/border-colors';*/
+/*@import 'basscss-addons/modules/darken';*/
+/*@import 'basscss-addons/modules/lighten';*/
+/*@import 'basscss-addons/modules/background-images';*/
 
 
 /*
@@ -117,6 +117,11 @@ pre, .pre {
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 18.5714px;
+}
+
+a, a:hover, a:visited, a:focus, a:link, a:active {
+    color: var(--black);
+    text-decoration: none;
 }
 
 .zn1 {

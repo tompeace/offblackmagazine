@@ -6,8 +6,7 @@ import util from '../../utilities'
 class StoryDetail extends React.Component {
     render() {
 
-        const items = util.try(() => this.props.acf.story_item.map((item, i) => {
-
+        const items = util.try(() => this.props.post.acf.story_item.map((item, i) => {
             let width
             if (item.width === "Full Width") {
                 width = "col-12"
@@ -23,8 +22,8 @@ class StoryDetail extends React.Component {
             }
 
             return (
-                <div className={`${float} ${width}`}>
-                    <div>
+                <div className=''>
+                    <div className={`${float} ${width}`}>
                         <Image src={item.image.url} />
                         <div className="col-12 box-sizing">
                             <div className="col-12 mt3 mb3 mr-auto ml-auto p2 border bold bg-white border-box image-credit">
@@ -42,15 +41,26 @@ class StoryDetail extends React.Component {
             <div className="py3">
                 <div className="relative col-9">
                     <div className="fixed col-12 top-0 left-0 red title-story-credit skew">
-                        <h1>{this.props.title.rendered}</h1>
-                        <h2 dangerouslySetInnerHTML={{__html: this.props.acf.title_credit}} />
+                        <h1>{this.props.post.title.rendered}</h1>
+                        <h2 dangerouslySetInnerHTML={{
+                            __html: this.props.post.acf.title_credit
+                        }} />
                     </div>
                 </div>
-                <div className="container container--story-items pt3">
+                <div className="clearfix container container--story-items pt3">
                     {items}
                 </div>
-                <div className='col-12 relative clearfix'>
-                    <Link to='/stories'>Back</Link>
+                <div className='container py4 fixed bottom-0 left-0 right-0'>
+                    <Link className='left' to={`/stories/${this.props.previousPost}`}>
+                        <span style={{fontSize: '50px'}}>
+                            {'⟵ Back'}
+                        </span>
+                    </Link>
+                    <Link className='right' to={`/stories/${this.props.nextPost}`}>
+                        <span style={{fontSize: '50px'}}>
+                            {'Next ⟶'}
+                        </span>
+                    </Link>
                 </div>
             </div>
         )

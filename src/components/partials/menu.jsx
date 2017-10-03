@@ -6,31 +6,14 @@ class Menu extends React.Component {
     constructor(props) {
         super(props)
         this.handleToggle = props.onHandleToggle.bind(this)
-        this.handleBlur = this.handleBlur.bind(this)
-    }
-
-    handleBlur() {
-        console.log('blurrrr');
     }
 
     render() {
         return (
             <div
-                onClick={()=>console.log('click')}
-                onBlur={this.handleBlur}
                 style={{minHeight: 'calc(100vh - 110px)'}}
                 className="mt3 mr3 bg-white border col-right col-6">
                 <nav>
-                    <div className='border-bottom p2'>
-                        Anthology Issue A/W 2017
-                    </div>
-                    <div className='p2 border-bottom block clearfix'>
-                        <div
-                            onClick={this.handleToggle}
-                            className="right">
-                            Close
-                        </div>
-                    </div>
                     <div className='border-bottom p2'>
                         Issues
                     </div>

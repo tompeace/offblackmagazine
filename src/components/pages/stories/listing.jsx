@@ -52,24 +52,22 @@ class ListingPage extends React.Component {
                 case 2:
                     stories.push(
                         <div className='clearfix col col-2 p3'>
-                            <div className="absolute not-empty"></div>
+                            <div className='absolute not-empty'></div>
                         </div>
                     )
                     break;
                 default:
-                    console.log('randomInt not handled:', randomInt);
                     stories.push(
                         <div className='clearfix col col-2 p3'>
-                            <div className="absolute not-empty"></div>
+                            <div className='absolute not-empty'></div>
                         </div>
                     )
             }
 
             if (itemCounter % 5 === 0) {
-                console.log('clearfix at:', itemCounter);
                 stories.push(
                     <div className='clearfix col col-2'>
-                        <div className="absolute not-empty"></div>
+                        <div className='absolute not-empty'></div>
                     </div>
                 )
             }

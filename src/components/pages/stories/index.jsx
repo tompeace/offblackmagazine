@@ -3,8 +3,6 @@ import { Switch, Route, Link } from 'react-router-dom'
 import Listing from './listing.jsx'
 import Detail from './detail.jsx'
 
-import API from '../../api'
-
 
 // Container for Stories listing page
 class ListingContainer extends React.Component {
@@ -13,20 +11,39 @@ class ListingContainer extends React.Component {
         // The FullRoster iterates over all of the players and creates
         // a link to their profile page.
 
+        const ListingComponent = (props) => (<Listing stories={this.props.stories}/>)
+        const DetailComponent = (props) => {
+            let previousPost
+            let nextPost
+            const post = this.props.stories.find((x) => x.slug === props.match.params.slug)
+            const index = this.props.stories.findIndex((x) => x.id === post.id)
+
+            if (index === this.props.stories.length - 1) {
+                nextPost = this.props.stories[0].slug
+                previousPost = this.props.stories[index - 1].slug
+            } else if (index === 0) {
+                nextPost = this.props.stories[1].slug
+                previousPost = this.props.stories[this.props.stories.length - 1].slug
+            } else {
+                nextPost = this.props.stories[index + 1].slug
+                previousPost = this.props.stories[index - 1].slug
+            }
+
+            const story = {
+                post,
+                previousPost,
+                nextPost
+            }
+
+            return (<Detail {...story}/>)
+        }
+
         if (this.props.stories.length > 0) {
             return (
                 <main className='relative height-100 mx4'>
                     <Switch>
-                        <Route exact path='/stories' render={(props) => (
-                            <Listing stories={this.props.stories}/>
-                        )} />
-                    <Route path='/stories/:slug' render={(props) => {
-                        const story = this.props.stories
-                            .find((x) => x.slug === props.match.params.slug)
-                        return (
-                            <Detail {...story}/>
-                        )}
-                    }/>
+                        <Route exact path='/stories' render={ListingComponent} />
+                        <Route path='/stories/:slug' render={DetailComponent}/>
                     </Switch>
                 </main>
             )
