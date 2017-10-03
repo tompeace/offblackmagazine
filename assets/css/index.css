@@ -218,7 +218,6 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
 
 /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 .title-story-credit{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   color: #e00505;
   margin-top: 90px;
   text-transform: uppercase;
@@ -230,7 +229,6 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
 .title-story-credit h2{
   font-size: 38px !important;
   line-height: .9;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 .container--story-items{

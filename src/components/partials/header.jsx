@@ -28,8 +28,8 @@ class Header extends React.Component {
                 <div style={{height: '67px'}} className="col-12"></div>
                 <div>
                     <div className={`z1 fixed left-0 right-0 top-0 ${this.state.menuActive ? 'bottom-0' :''}`}>
-                        <div className="bg-white mr3 ml3 mt3 p2 border border-black line-height-2 cursor-pointer">
-                            Anthology Issue A/W 2017
+                        <div className='bg-white mr3 ml3 mt3 p2 border border-black line-height-2 cursor-pointer'>
+                            <Link to='/'>Anthology Issue A/W 2017</Link>
                             <span
                                 onClick={this.handleToggle}
                                 className='right'>
