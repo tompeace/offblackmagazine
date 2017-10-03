@@ -26,8 +26,12 @@ class StoryDetail extends React.Component {
                     <div className={`${float} ${width}`}>
                         <Image src={item.image.url} />
                         <div className="col-12 box-sizing">
-                            <div className="col-12 mt3 mb3 mr-auto ml-auto p2 border bg-white border-box image-credit">
-                              {item.image.filename}
+                            <div className="col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit">
+                              {item.credits.map((credit, i) => (
+                                  <div className={`p2 ${i === item.credits.length - 1 ? '' : 'border-bottom'}`}>
+                                      {credit.credit}
+                                  </div>
+                              ))}
                             </div>
                         </div>
                     </div>

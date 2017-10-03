@@ -22,13 +22,15 @@ class Menu extends React.Component {
                             src='/'
                             className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
-                            Anthology
+                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
+                                Anthology
+                            </span>
                         </a>
                         <a
                             src='/'
                             className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
-                            <span style={{pointerEvents: 'none'}}>
+                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
                                 The Future is: Theirs
                             </span>
                         </a>
@@ -36,13 +38,17 @@ class Menu extends React.Component {
                             src='/'
                             className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
-                            Man Made
+                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
+                                Man Made
+                            </span>
                         </a>
                         <a
                             src='/'
                             className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
-                            Raw
+                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
+                                Raw
+                            </span>
                         </a>
                         <a
                             src='http://offblackmagazine.com/archive-cult'
@@ -54,7 +60,9 @@ class Menu extends React.Component {
                             src='/'
                             className='block pb2 cursor-pointer line-through'
                             onClick={this.handleToggle}>
-                            Double
+                            <span style={{pointerEvents: 'none', textDecoration: 'line-through'}}>
+                                Double
+                            </span>
                         </a>
                         <a
                             src='http://offblackmagazine.com/archive/the-body'
