@@ -54,7 +54,7 @@ class StoryDetail extends React.Component {
                     <div className="my4">
                         <Link className='left' to={`/stories/${this.props.previousPost}`}>
                             <span style={{
-                                    fontSize: '50px'
+                                    fontSize: '50px',
                                     textOrientation: 'sideways'
                                 }}>
                                 {'⟵ Prev'}
