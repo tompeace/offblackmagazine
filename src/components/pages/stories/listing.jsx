@@ -19,7 +19,7 @@ class ListingPage extends React.Component {
         let story
         let stories = []
         let storyCounter = 0
-        let itemCounter = 0
+        let itemCounter = 1
 
         while (storyCounter < this.props.stories.length) {
             switch (getRandomInt()) {
@@ -42,7 +42,7 @@ class ListingPage extends React.Component {
                     break;
                 case 1:
                     stories.push(
-                        <div className='clearfix col col-2'>
+                        <div className='clearfix col col-6 sm-col-2'>
                             <div className="p1">
                                 <div className='aspect-2-3 overflow-hidden border'>
                                     <Image
@@ -55,26 +55,26 @@ class ListingPage extends React.Component {
                     break;
                 case 2:
                     stories.push(
-                        <div className='clearfix col col-2 p1'>
+                        <div className='clearfix col col-6 sm-show sm-col-12 p1'>
                             <div className='absolute not-empty'></div>
                         </div>
                     )
                     break;
                 default:
                     stories.push(
-                        <div className='clearfix col col-2 p1'>
+                        <div className='clearfix col col-6 sm-col-12 p1'>
                             <div className='absolute not-empty'></div>
                         </div>
                     )
             }
-
-            if (itemCounter % 5 === 0) {
+			itemCounter % 6 === 0 &&
                 stories.push(
-                    <div className='clearfix col col-2'>
-                        <div className='absolute not-empty'></div>
-                    </div>
+                    <div className='clearfix col col-12 sm-show this-is-a-clearfix' />
                 )
-            }
+            itemCounter % 2 === 0 &&
+                stories.push(
+                    <div className='clearfix col col-12 sm-hide this-is-a-clearfix' />
+                )
             itemCounter++
         }
         return (

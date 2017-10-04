@@ -66,8 +66,7 @@ class StoryDetail extends React.Component {
                         <div className='center col col-6'>
                             <Link to={`/stories/${this.props.previousPost}`}>
                                 <div
-                                    className='bold'
-                                    style={{fontSize: '150px'}}>
+                                    className='bold xx-large'>
                                     Prev
                                 </div>
                             </Link>
@@ -75,8 +74,7 @@ class StoryDetail extends React.Component {
                         <div className='center col-right col-6'>
                             <Link to={`/stories/${this.props.nextPost}`}>
                                 <div
-                                    className='bold'
-                                    style={{fontSize: '150px'}}>
+                                    className='bold xx-large'>
                                     Next
                                 </div>
                             </Link>
