@@ -61,23 +61,27 @@ class StoryDetail extends React.Component {
                 <div className="clearfix container container--story-items pt3">
                     {items}
                 </div>
-                <div className='container py4'>
+                <div className='clearfix container py4'>
                     <div className="my4">
-                        <Link className='left' to={`/stories/${this.props.previousPost}`}>
-                            <span style={{
-                                    fontSize: '50px',
-                                    textOrientation: 'sideways'
+                        <Link className='center col col-6' replace to={`/stories/${this.props.previousPost}`}>
+                            <div
+                                className='bold'
+                                style={{
+                                    fontSize: '150px',
+                                    transform: 'rotate(-90deg)'
                                 }}>
-                                {'⟵ Prev'}
-                            </span>
+                                Prev
+                            </div>
                         </Link>
-                        <Link className='right' to={`/stories/${this.props.nextPost}`}>
-                            <span style={{
-                                    fontSize: '50px',
-                                    textOrientation: 'sideways'
+                        <Link className='center col-right col-6' replace to={`/stories/${this.props.nextPost}`}>
+                            <div
+                                className='bold'
+                                style={{
+                                    fontSize: '150px',
+                                    transform: 'rotate(90deg)'
                                 }}>
-                                {'Next ⟶'}
-                            </span>
+                                Next
+                            </div>
                         </Link>
                     </div>
                 </div>

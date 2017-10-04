@@ -7,6 +7,7 @@ import {
 
 import { Home, Stories, About} from './pages'
 import Header from './partials/header.jsx'
+import ScrollToTop from './utilities/ScrollToTop.jsx'
 import util from './utilities'
 
 class Main extends React.Component {
@@ -28,11 +29,11 @@ class Main extends React.Component {
 
     render() {
         const StoriesComponent = (props) => (<Stories stories={this.state.stories}/>)
-        
+
         return (
             <main className='height-100'>
                 <Header />
-                <Switch>
+                <Switch onUpdate={() => window.scrollTo(0, 0)}>
                     <Route exact path='/' component={Home}/>
                     <Route path='/stories' render={StoriesComponent} />
                     <Route path='/about' component={About}/>
@@ -45,7 +46,9 @@ class Main extends React.Component {
 
 const app = ReactDOM.render(
     (<HashRouter>
-        <Main />
+        <ScrollToTop>
+            <Main />
+        </ScrollToTop>
     </HashRouter>),
     document.getElementById('root')
 )
