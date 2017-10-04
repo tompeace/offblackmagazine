@@ -63,26 +63,24 @@ class StoryDetail extends React.Component {
                 </div>
                 <div className='clearfix container py4'>
                     <div className="my4">
-                        <Link className='center col col-6' replace to={`/stories/${this.props.previousPost}`}>
-                            <div
-                                className='bold'
-                                style={{
-                                    fontSize: '150px',
-                                    transform: 'rotate(-90deg)'
-                                }}>
-                                Prev
-                            </div>
-                        </Link>
-                        <Link className='center col-right col-6' replace to={`/stories/${this.props.nextPost}`}>
-                            <div
-                                className='bold'
-                                style={{
-                                    fontSize: '150px',
-                                    transform: 'rotate(90deg)'
-                                }}>
-                                Next
-                            </div>
-                        </Link>
+                        <div className='center col col-6'>
+                            <Link to={`/stories/${this.props.previousPost}`}>
+                                <div
+                                    className='bold'
+                                    style={{fontSize: '150px'}}>
+                                    Prev
+                                </div>
+                            </Link>
+                        </div>
+                        <div className='center col-right col-6'>
+                            <Link to={`/stories/${this.props.nextPost}`}>
+                                <div
+                                    className='bold'
+                                    style={{fontSize: '150px'}}>
+                                    Next
+                                </div>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -300,8 +300,3 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
     pointer-events: none;
     text-decoration: line-through;
 }
-
-.vertical-text {
-	transform: rotate(90deg);
-	transform-origin: left top 0;
-}
