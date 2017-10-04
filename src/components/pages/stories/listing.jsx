@@ -26,7 +26,10 @@ class ListingPage extends React.Component {
                 case 0:
                     story = this.props.stories[storyCounter]
                     stories.push(
-                        <div className='clearfix col col-2'>
+                        <div
+							onMouseEnter={this.props.onHandleStoryHover.bind(this, story.title.rendered)}
+							onMouseLeave={this.props.onHandleStoryHover.bind(this, '')}
+							className='clearfix col col-6 sm-col-2'>
                             <div className="p1">
                                 <div className='aspect-2-3 overflow-hidden'>
                                     <Link to={`/stories/${story.slug}`}>

@@ -8,10 +8,12 @@ import Detail from './detail.jsx'
 class ListingContainer extends React.Component {
 
     render() {
-        // The FullRoster iterates over all of the players and creates
-        // a link to their profile page.
 
-        const ListingComponent = (props) => (<Listing stories={this.props.stories}/>)
+        const ListingComponent = (props) => (
+			<Listing
+				onHandleStoryHover={this.props.onHandleStoryHover}
+				stories={this.props.stories}/>
+		)
         const DetailComponent = (props) => {
             let previousPost
             let nextPost
@@ -35,12 +37,12 @@ class ListingContainer extends React.Component {
                 nextPost
             }
 
-            return (<Detail {...story}/>)
+            return (<Detail {...story} />)
         }
 
         if (this.props.stories.length > 0) {
             return (
-                <main className='relative height-100'>
+                <main onClick={this.props.onHandleStoryHover} className='relative height-100'>
                     <Switch>
                         <Route exact path='/stories' render={ListingComponent} />
                         <Route path='/stories/:slug' render={DetailComponent}/>

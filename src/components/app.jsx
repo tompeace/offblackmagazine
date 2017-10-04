@@ -14,7 +14,8 @@ class Main extends React.Component {
     constructor() {
         super()
         this.state = {
-            stories: []
+            stories: [],
+			hoveredStory: ''
         }
     }
 
@@ -27,12 +28,19 @@ class Main extends React.Component {
             })
     }
 
+	handleStoryHover(title) {
+		this.setState({hoveredStory: title})
+	}
+
     render() {
-        const StoriesComponent = (props) => (<Stories stories={this.state.stories}/>)
+        const StoriesComponent = (props) => (
+			<Stories
+				onHandleStoryHover={this.handleStoryHover}
+				stories={this.state.stories}/>)
 
         return (
             <main className='height-100'>
-                <Header />
+                <Header story={this.state.hoveredStory}/>
                 <Switch onUpdate={() => window.scrollTo(0, 0)}>
                     <Route exact path='/' component={Home}/>
                     <Route path='/stories' render={StoriesComponent} />
