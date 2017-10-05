@@ -273,7 +273,7 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
     cursor: pointer;
 }
 
-.v-centre{
+.v-centre {
     position:absolute;
     top:50%;
     transform:translateY(-50%)

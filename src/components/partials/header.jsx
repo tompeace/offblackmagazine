@@ -28,7 +28,7 @@ class Header extends React.Component {
                             <span
                                 onClick={this.handleToggle}
                                 className='right cursor-pointer'>
-                                {this.props.story}
+                                {this.props.hoveredStory}
                             </span>
                         </div>
                         {this.state.menuActive && (

@@ -35,8 +35,10 @@ class Main extends React.Component {
     render() {
         const StoriesComponent = (props) => (
 			<Stories
+                hoveredStory={this.state.hoveredStory}
 				onHandleStoryHover={this.handleStoryHover}
-				stories={this.state.stories}/>)
+				stories={this.state.stories}/>
+        )
 
         return (
             <main className='height-100'>

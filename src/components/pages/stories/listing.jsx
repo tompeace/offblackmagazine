@@ -12,6 +12,10 @@ class ListingPage extends React.Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return false
+    }
+
     render() {
         const PROB = 2
         const getRandomInt = () => Math.floor(Math.random() * PROB);
