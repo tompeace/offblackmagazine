@@ -93,20 +93,20 @@ class StoryDetail extends React.Component {
                 <div className='clearfix container container--story-items pt3'>
                     {items}
                 </div>
-                <div className='clearfix container py4'>
-                    <div className='my4'>
-                        <div className='center col col-6'>
+                <div className='clearfix container border mt3'>
+                    <div>
+                        <div className='col col-6 border-right'>
                             <Link to={`/stories/${this.props.previousPost}`}>
                                 <div
-                                    className='bold xx-large'>
+                                    className='p2 bold'>
                                     Prev
                                 </div>
                             </Link>
                         </div>
-                        <div className='center col-right col-6'>
+                        <div className='col-right col-6'>
                             <Link to={`/stories/${this.props.nextPost}`}>
                                 <div
-                                    className='bold xx-large'>
+                                    className='p2 bold right'>
                                     Next
                                 </div>
                             </Link>
