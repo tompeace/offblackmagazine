@@ -67,23 +67,20 @@ class Image extends React.Component {
 
         let image;
         let classes = this.props.className || '';
-        classes += ' transition-opacity';
         let style = this.props.style || {};
 
         const fadeIn = this.state.loaded ? ' opacity-1' : ' opacity-0'
 
         if (this.props.src) {
             if (typeof this.props.src === 'string') {
-
                 image = (
                     <img
                         ref='image'
-                        className={'block col-12 ' + classes + fadeIn}
+                        className={`block col-12 transition-opacity ${classes} ${fadeIn}`}
                         style={style}
                         src={this.props.src}
                         alt={this.props.alt} />
                 );
-
             } else {
                 image = (
                     <Default className={this.props.className} />

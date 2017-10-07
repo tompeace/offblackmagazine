@@ -5,20 +5,6 @@ import util from '../../utilities'
 
 class StoryDetail extends React.Component {
 
-
-
-    handleOnLoad() {
-        if (!this.count) {
-            this.count = 0
-        } else {
-            this.count++
-        }
-        if (this.count === this.props.post.acf.story_item) {
-
-        }
-        console.log('loaded');
-    }
-
     render() {
 
         const items = util.try(() => this.props.post.acf.story_item.map((item, i) => {
@@ -38,7 +24,7 @@ class StoryDetail extends React.Component {
                 container = 'clearfix'
             }
 
-            const credits = util.isArray(item.credits)
+            const itemCredits = util.isArray(item.credits)
             ? (
                 <div className='col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit'>
                     {item.credits.map((credit, i) => (
@@ -56,10 +42,9 @@ class StoryDetail extends React.Component {
                 component = (
                     <div>
                         <Image
-                            onHasLoaded={this.handleOnLoad}
                             src={item.image.url} />
                         <div className='col-12 box-sizing'>
-                            {credits}
+                            {itemCredits}
                         </div>
                     </div>
                 )
@@ -80,10 +65,24 @@ class StoryDetail extends React.Component {
             )
         }))
 
+        const storyCredits = util.isArray(this.props.post.acf.story_credits)
+        ? (
+            <div className='col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit'>
+                {this.props.post.acf.story_credits.map((item, i) => (
+                    <div className={`p2 ${i === this.props.post.acf.story_credits.length - 1 ? '' : 'border-bottom'}`}>
+                        {item.credit}
+                    </div>
+                ))}
+            </div>
+        ) : (
+            <div className='col-12 mb3'></div>
+        )
+
+        console.log(items);
         return (
             <div className='py3'>
                 <div className='relative col-9'>
-                    <div className='fixed col-12 top-0 left-0 red title-story-credit skew'>
+                    <div className='fixed col-12 top-0 left-0 red title-story-credit'>
                         <h1 dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}} />
                         {util.try(() => (
                             <h2 dangerouslySetInnerHTML={{__html: this.props.post.acf.title_credit}} />
@@ -92,6 +91,9 @@ class StoryDetail extends React.Component {
                 </div>
                 <div className='clearfix container container--story-items pt3'>
                     {items}
+                </div>
+                <div className="clearfix container pt3">
+                    {storyCredits}
                 </div>
                 <div className='clearfix container border mt3'>
                     <div>

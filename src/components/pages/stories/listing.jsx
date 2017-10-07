@@ -12,12 +12,8 @@ class ListingPage extends React.Component {
         }
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        return false
-    }
-
     render() {
-        const PROB = 2
+        const PROB = 1.5
         const getRandomInt = () => Math.floor(Math.random() * PROB);
 
         let story
@@ -31,8 +27,6 @@ class ListingPage extends React.Component {
                     story = this.props.stories[storyCounter]
                     stories.push(
                         <div
-							onMouseEnter={this.props.onHandleStoryHover.bind(this, story.title.rendered)}
-							onMouseLeave={this.props.onHandleStoryHover.bind(this, '')}
 							className='clearfix col col-6 sm-col-2'>
                             <div className="p1">
                                 <div className='aspect-2-3 overflow-hidden'>
@@ -60,13 +54,6 @@ class ListingPage extends React.Component {
                         </div>
                     )
                     break;
-                case 2:
-                    stories.push(
-                        <div className='clearfix col col-6 sm-show sm-col-12 p1'>
-                            <div className='absolute not-empty'></div>
-                        </div>
-                    )
-                    break;
                 default:
                     stories.push(
                         <div className='clearfix col col-6 sm-col-12 p1'>
@@ -74,14 +61,12 @@ class ListingPage extends React.Component {
                         </div>
                     )
             }
+
 			itemCounter % 6 === 0 &&
-                stories.push(
-                    <div className='clearfix col col-12 sm-show this-is-a-clearfix' />
-                )
+                stories.push(<div className='clearfix col col-12 sm-show' />)
             itemCounter % 2 === 0 &&
-                stories.push(
-                    <div className='clearfix col col-12 sm-hide this-is-a-clearfix' />
-                )
+                stories.push(<div className='clearfix col col-12 sm-hide' />)
+
             itemCounter++
         }
         return (
