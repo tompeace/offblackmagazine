@@ -9,12 +9,12 @@ class Home extends React.Component {
         return (
             <section className='relative height-100 overflow-hidden'>
                 <Link to='/stories'>
-                    <div className='fixed top-0 bottom-0 left-0 right-0'>
-                        <div className='v-centre'>
+                    <div className='table'>
+                        <div className='tr'>
                             <Carousel
-                                imgClassName=''
-                                className='col col-6'
-                                borderClass='border border-black'
+                                imgClassName='center-carousel-img right'
+                                className='td td-1'
+                                borderClass='border-top border-bottom border-left border-right border-black'
                                 interval={2000}
                                 items={[
                                     {src: './build/images/OB_left-01.jpg'},
@@ -32,8 +32,8 @@ class Home extends React.Component {
                                 ]}
                             />
                             <Carousel
-                                imgClassName=''
-                                className='col-right col-6'
+                                imgClassName='center-carousel-img'
+                                className='td td-2'
                                 borderClass='border-top border-bottom border-right border-black'
                                 interval={2000}
                                 items={[

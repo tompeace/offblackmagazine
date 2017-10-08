@@ -15,40 +15,34 @@ class Main extends React.Component {
         super()
         this.state = {
             stories: [],
-			hoveredStory: ''
+            hoveredStory: ''
         }
     }
 
     componentDidMount() {
         fetch('http://offblackmagazine.com/dev/wp-json/wp/v2/posts?per_page=100')
             .then((data) => data.json())
-            .then((posts) => {
-                this.setState({stories: posts}, () =>
-                    console.log('stories', this.state.stories))
-            })
+            .then((stories) => this.setState({stories}))
     }
 
-	handleStoryHover(title) {
-		this.setState({hoveredStory: title})
+	handleStoryHover(hoveredStory) {
+		this.setState({hoveredStory})
 	}
 
     render() {
         const StoriesComponent = (props) => (
 			<Stories
-                hoveredStory={this.state.hoveredStory}
 				onHandleStoryHover={this.handleStoryHover}
 				stories={this.state.stories}/>
         )
 
         return (
             <main className='height-100'>
-                <Header story={this.state.hoveredStory}/>
-                <Switch onUpdate={() => window.scrollTo(0, 0)}>
+                <Header />
+                <Switch>
                     <Route exact path='/' component={Home}/>
                     <Route path='/stories' render={StoriesComponent} />
-                    <Route path='/about' component={About}/>
                 </Switch>
-                <div style={{height: '67px'}} className="col-12"></div>
             </main>
         )
     }

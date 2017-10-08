@@ -12,6 +12,10 @@ class ListingPage extends React.Component {
         }
     }
 
+    shouldComponentUpdate() {
+        return false
+    }
+
     render() {
         const PROB = 1.5
         const getRandomInt = () => Math.floor(Math.random() * PROB);
@@ -21,6 +25,7 @@ class ListingPage extends React.Component {
         let storyCounter = 0
         let itemCounter = 1
 
+
         while (storyCounter < this.props.stories.length) {
             switch (getRandomInt()) {
                 case 0:
@@ -29,10 +34,13 @@ class ListingPage extends React.Component {
                         <div
 							className='clearfix col col-6 sm-col-2'>
                             <div className="p1">
-                                <div className='aspect-2-3 overflow-hidden'>
+                                <div
+                                    onMouseEnter={this.props.onHandleStoryHover.bind(this, story.title.rendered)}
+                                    onMouseLeave={this.props.onHandleStoryHover.bind(this, null)}
+                                    className='aspect-2-3 overflow-hidden'>
                                     <Link to={`/stories/${story.slug}`}>
                                         <Image
-                                            className='absolute'
+                                            className='col-12 absolute'
                                             src={util.try(() => story.acf.listing_image.url)} />
                                     </Link>
                                 </div>
@@ -47,7 +55,7 @@ class ListingPage extends React.Component {
                             <div className="p1">
                                 <div className='aspect-2-3 overflow-hidden border'>
                                     <Image
-                                        className='absolute'
+                                        className='col-12 absolute'
                                         src={util.try(() => './build/images/background_cross.png')}/>
                                 </div>
                             </div>

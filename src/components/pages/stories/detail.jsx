@@ -6,8 +6,14 @@ import util from '../../utilities'
 class StoryDetail extends React.Component {
 
     render() {
+        const isTextStory = this.props.post.acf.story_item.reduce((res, obj) => {
+            if (obj.type === 'Image') {
+                res = false
+            }
+            return res
+        }, true)
 
-        const items = util.try(() => this.props.post.acf.story_item.map((item, i) => {
+        const renderMixed = (item, i) => {
             let width
             if (item.width === "Full Width") {
                 width = "col-12"
@@ -42,6 +48,7 @@ class StoryDetail extends React.Component {
                 component = (
                     <div>
                         <Image
+                            className='col-12'
                             src={item.image.url} />
                         <div className='col-12 box-sizing'>
                             {itemCredits}
@@ -63,7 +70,27 @@ class StoryDetail extends React.Component {
                     </div>
                 </div>
             )
-        }))
+        }
+
+        const renderText = (item, i) => {
+            let itemComponents = []
+            itemComponents.push(
+                <div className="col col-6">
+                    <div
+                        className='mx3'
+                        dangerouslySetInnerHTML={{__html: item.text}} />
+                </div>
+            )
+            if (i !== 0 && i % 2 === 0) {
+                itemComponents.push(
+                    <div className="clearfix col-12 border-bottom" />
+                )
+            }
+            return itemComponents
+        }
+
+        const renderItems = isTextStory ? renderText : renderMixed;
+        const items = util.try(() => this.props.post.acf.story_item.map(renderItems));
 
         const storyCredits = util.isArray(this.props.post.acf.story_credits)
         ? (
@@ -78,7 +105,6 @@ class StoryDetail extends React.Component {
             <div className='col-12 mb3'></div>
         )
 
-        console.log(items);
         return (
             <div className='py3'>
                 <div className='relative col-9'>
@@ -97,22 +123,22 @@ class StoryDetail extends React.Component {
                 </div>
                 <div className='clearfix container border mt3'>
                     <div>
-                        <div className='col col-6 border-right'>
-                            <Link to={`/stories/${this.props.previousPost}`}>
+                        <Link to={`/stories/${this.props.previousPost}`}>
+                            <div className='col col-6 border-right'>
                                 <div
                                     className='p2 bold'>
                                     Prev
                                 </div>
-                            </Link>
-                        </div>
-                        <div className='col-right col-6'>
-                            <Link to={`/stories/${this.props.nextPost}`}>
+                            </div>
+                        </Link>
+                        <Link to={`/stories/${this.props.nextPost}`}>
+                            <div className='col-right col-6'>
                                 <div
                                     className='p2 bold right'>
                                     Next
                                 </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

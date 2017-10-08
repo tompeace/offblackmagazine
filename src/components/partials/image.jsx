@@ -76,7 +76,7 @@ class Image extends React.Component {
                 image = (
                     <img
                         ref='image'
-                        className={`block col-12 transition-opacity ${classes} ${fadeIn}`}
+                        className={`block transition-opacity ${classes} ${fadeIn}`}
                         style={style}
                         src={this.props.src}
                         alt={this.props.alt} />

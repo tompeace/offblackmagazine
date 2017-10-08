@@ -41,6 +41,11 @@ class ListingContainer extends React.Component {
         if (this.props.stories.length > 0) {
             return (
                 <main className='relative height-100'>
+                    <div className='col-12 clearfix'>
+                        <div
+                            className="p2 mr3 ml3 mt3"
+                            dangerouslySetInnerHTML={{__html: '&nbsp;'}} />
+                    </div>
                     <Switch>
                         <Route exact path='/stories' render={ListingComponent} />
                         <Route path='/stories/:slug' render={DetailComponent}/>
