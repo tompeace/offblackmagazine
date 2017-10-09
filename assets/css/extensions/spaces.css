@@ -49,6 +49,13 @@
 .m0  { margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0; }
 .p0  { padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; }
 
+.mxn1px { margin-left: -1px; margin-right: -1px; }
+.myn1px { margin-top: -1px; margin-bottom: -1px; }
+.mln1px { margin-left: -1px; }
+.mrn1px { margin-right: -1px; }
+.mtn1px { margin-top: -1px; }
+.mbn1px { margin-bottom: -1px; }
+
 .m1  { margin: var(--space-1); }
 .mt1 { margin-top: var(--space-1); }
 .mb1 { margin-bottom: var(--space-1); }

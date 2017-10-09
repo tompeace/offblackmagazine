@@ -74,18 +74,16 @@ class StoryDetail extends React.Component {
 
         const renderText = (item, i) => {
             let itemComponents = []
+            const borderClass = i % 2 === 0 ? 'border-left border-right' : 'border-right'
             itemComponents.push(
-                <div className="col col-6">
+                <div
+                    style={{height: '300px'}}
+                    className={`col col-6 ${borderClass} border-top border-bottom mtn1px`}>
                     <div
                         className='mx3'
                         dangerouslySetInnerHTML={{__html: item.text}} />
                 </div>
             )
-            if (i !== 0 && i % 2 === 0) {
-                itemComponents.push(
-                    <div className="clearfix col-12 border-bottom" />
-                )
-            }
             return itemComponents
         }
 

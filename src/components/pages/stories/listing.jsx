@@ -8,7 +8,8 @@ class ListingPage extends React.Component {
     constructor() {
         super()
         this.state = {
-            posts: []
+            posts: [],
+            hoveredStory: null
         }
     }
 
@@ -25,7 +26,6 @@ class ListingPage extends React.Component {
         let storyCounter = 0
         let itemCounter = 1
 
-
         while (storyCounter < this.props.stories.length) {
             switch (getRandomInt()) {
                 case 0:
@@ -34,14 +34,16 @@ class ListingPage extends React.Component {
                         <div
 							className='clearfix col col-6 sm-col-2'>
                             <div className="p1">
-                                <div
-                                    onMouseEnter={this.props.onHandleStoryHover.bind(this, story.title.rendered)}
-                                    onMouseLeave={this.props.onHandleStoryHover.bind(this, null)}
-                                    className='aspect-2-3 overflow-hidden'>
+                                <div className='aspect-2-3 overflow-hidden cursor-pointer'>
                                     <Link to={`/stories/${story.slug}`}>
-                                        <Image
-                                            className='col-12 absolute'
-                                            src={util.try(() => story.acf.listing_image.url)} />
+                                        <div
+                                            className='p2 absolute'
+                                            dangerouslySetInnerHTML={{__html: story.title.rendered}} />
+                                        <div className='hover-fade opacity-1'>
+                                            <Image
+                                                className='col-12 absolute'
+                                                src={util.try(() => story.acf.listing_image.url)} />
+                                        </div>
                                     </Link>
                                 </div>
                             </div>
