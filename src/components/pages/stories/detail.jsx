@@ -34,9 +34,9 @@ class StoryDetail extends React.Component {
             ? (
                 <div className='col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit'>
                     {item.credits.map((credit, i) => (
-                        <div className={`p2 ${i === item.credits.length - 1 ? '' : 'border-bottom'}`}>
-                            {credit.credit}
-                        </div>
+                        <div
+                            className={`p2 ${i === item.credits.length - 1 ? '' : 'border-bottom'}`}
+                            dangerouslySetInnerHTML={{__html: credit.credit}} />
                     ))}
                 </div>
             ) : (
@@ -94,9 +94,9 @@ class StoryDetail extends React.Component {
         ? (
             <div className='col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit'>
                 {this.props.post.acf.story_credits.map((item, i) => (
-                    <div className={`p2 ${i === this.props.post.acf.story_credits.length - 1 ? '' : 'border-bottom'}`}>
-                        {item.credit}
-                    </div>
+                    <div
+                        className={`p2 ${i === this.props.post.acf.story_credits.length - 1 ? '' : 'border-bottom'}`}
+                        dangerouslySetInnerHTML={{__html: item.credit}} />
                 ))}
             </div>
         ) : (
