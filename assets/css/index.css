@@ -238,7 +238,7 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
   padding: 5px;
 }
 
-.line-through:hover {
+.hover-line-through:hover {
     text-decoration: line-through;
 }
 

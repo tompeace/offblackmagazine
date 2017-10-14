@@ -62,10 +62,18 @@ class Menu extends React.Component {
                         </a>
                     </div>
                     <div className='border-bottom p2'>
-                        <a className='cursor-pointer line-through' href="/past/about">About</a>
+                        <a
+                            className='cursor-pointer hover-line-through'
+                            href="http://offblackmagazine.com/past/about">
+                            About
+                        </a>
                     </div>
                     <div className='border-bottom p2'>
-                        <a className='cursor-pointer line-through' href="/past/contributors">Contributors</a>
+                        <a
+                            className='cursor-pointer hover-line-through'
+                            href="http://offblackmagazine.com/past/contributors">
+                            Contributors
+                        </a>
                     </div>
                 </nav>
             </div>
