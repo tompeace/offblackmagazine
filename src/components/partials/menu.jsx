@@ -19,52 +19,58 @@ class Menu extends React.Component {
                     </div>
                     <div className="border-bottom p2">
                         <a
-                            src='/'
-                            className='block pb2 cursor-pointer line-through'>
+                            target='_blank'
+                            href='/'
+                            className='block pb2 cursor-pointer hover-line-through'>
                             Anthology
                         </a>
                         <a
-                            src='/'
-                            className='block pb2 cursor-pointer line-through inactive-link'>
-                            The Future is: Theirs
+                            target='_blank'
+                            href='http://offblackmagazine.com/past/issues/the-future-is-theirs/'
+                            className='block pb2 cursor-pointer hover-line-through'>
+                            THE FUTURE IS: THEIRS
                         </a>
                         <a
-                            src='/'
-                            className='block pb2 cursor-pointer line-through inactive-link'>
+                            target='_blank'
+                            href='http://offblackmagazine.com/past/issues/man-made/'
+                            className='block pb2 cursor-pointer hover-line-through'>
                             Man Made
                         </a>
                         <a
-                            src='/'
-                            className='block pb2 cursor-pointer line-through inactive-link'>
+                            target='_blank'
+                            href='http://offblackmagazine.com/past/issues/raw/'
+                            className='block pb2 cursor-pointer hover-line-through'>
                             Raw
                         </a>
                         <a
-                            src='http://offblackmagazine.com/archive-cult'
-                            className='block pb2 cursor-pointer line-through'>
+                            target='_blank'
+                            href='http://offblackmagazine.com/archive-cult'
+                            className='block pb2 cursor-pointer hover-line-through'>
                             Cult
                         </a>
                         <a
-                            src='/'
-                            className='block pb2 cursor-pointer line-through inactive-link'>
+                            target='_blank'
+                            href='http://offblackmagazine.com/archive/double/'
+                            className='block pb2 cursor-pointer hover-line-through'>
                             Double
                         </a>
                         <a
-                            src='http://offblackmagazine.com/archive/the-body'
-                            className='block pb2 mb4 cursor-pointer line-through'>
+                            target='_blank'
+                            href='http://offblackmagazine.com/archive/the-body'
+                            className='block pb2 mb4 cursor-pointer hover-line-through'>
                             The Body
                         </a>
                     </div>
                     <div className='border-bottom p2'>
-                        <a className='cursor-pointer line-through' href="">About</a>
+                        <a className='cursor-pointer line-through' href="/past/about">About</a>
                     </div>
                     <div className='border-bottom p2'>
-                        <a className='cursor-pointer line-through' href="">Contributors</a>
+                        <a className='cursor-pointer line-through' href="/past/contributors">Contributors</a>
                     </div>
                 </nav>
             </div>
         )
     }
 }
-
 
 export default Menu

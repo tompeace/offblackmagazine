@@ -77,7 +77,7 @@ class StoryDetail extends React.Component {
             const borderClass = i % 2 === 0 ? 'border-left border-right' : 'border-right'
             itemComponents.push(
                 <div
-                    style={{height: '300px'}}
+                    style={{minHeight: '300px'}}
                     className={`col col-6 ${borderClass} border-top border-bottom mtn1px`}>
                     <div
                         className='mx3'
@@ -104,7 +104,9 @@ class StoryDetail extends React.Component {
         )
 
         return (
-            <div className='py3'>
+            <div
+                ref='detailPage'
+                className='py3'>
                 <div className='relative col-9'>
                     <div className='fixed col-12 top-0 left-0 red title-story-credit'>
                         <h1 dangerouslySetInnerHTML={{__html: this.props.post.title.rendered}} />

@@ -32,11 +32,11 @@ class Header extends React.Component {
                             <span
                                 onClick={this.handleToggle}
                                 className='right cursor-pointer'>
-
+                                Menu
                             </span>
                         </div>
                         {this.state.menuActive && (
-                            <div className='pl4 ml1 cursor-pointer'>
+                            <div className='cursor-pointer'>
                                 <Menu onHandleToggle={this.handleToggle} />
                             </div>
                         )}
