@@ -6,12 +6,6 @@ import util from '../../utilities'
 class StoryDetail extends React.Component {
 
     render() {
-        const isTextStory = this.props.post.acf.story_item.reduce((res, obj) => {
-            if (obj.type === 'Image') {
-                res = false
-            }
-            return res
-        }, true)
 
         const renderMixed = (item, i) => {
             let width
@@ -74,11 +68,9 @@ class StoryDetail extends React.Component {
 
         const renderText = (item, i) => {
             let itemComponents = []
-            const borderClass = i % 2 === 0 ? 'border-left border-right' : 'border-right'
+            const borderClass = i % 2 === 0 ? 'md-border-left md-border-right' : 'md-border-right'
             itemComponents.push(
-                <div
-                    style={{minHeight: '300px'}}
-                    className={`col col-6 ${borderClass} border-top border-bottom mtn1px bg-white mb3`}>
+                <div className={`col col-12 md-col-6 ${borderClass} md-border-top md-border-bottom mtn1px bg-white mb3 text-story`}>
                     <div
                         className='mx3'
                         dangerouslySetInnerHTML={{__html: item.text}} />
@@ -86,6 +78,9 @@ class StoryDetail extends React.Component {
             )
             return itemComponents
         }
+
+        const isTextStory = this.props.post.acf.story_item
+            .reduce((res, obj) => res = obj.type === 'Image' ? false : true, true)
 
         const renderItems = isTextStory ? renderText : renderMixed;
         const items = util.try(() => this.props.post.acf.story_item.map(renderItems));

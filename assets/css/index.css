@@ -345,3 +345,13 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
 .limit-line-length {
     max-width: 40rem;
 }
+
+.text-story {
+    min-height: auto
+}
+
+@media (--breakpoint-md) {
+    .text-story {
+        min-height: 300px;
+    }
+}
