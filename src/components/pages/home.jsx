@@ -34,7 +34,7 @@ class Home extends React.Component {
                             <Carousel
                                 imgClassName='center-carousel-img'
                                 className='td td-2'
-                                borderClass='border-top border-bottom border-right border-black'
+                                borderClass='border-left border-top border-bottom border-right border-black'
                                 interval={2000}
                                 items={[
                                     {src: './build/images/OB_right-01.jpg'},

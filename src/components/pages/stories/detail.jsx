@@ -78,7 +78,7 @@ class StoryDetail extends React.Component {
             itemComponents.push(
                 <div
                     style={{minHeight: '300px'}}
-                    className={`col col-6 ${borderClass} border-top border-bottom mtn1px`}>
+                    className={`col col-6 ${borderClass} border-top border-bottom mtn1px bg-white mb3`}>
                     <div
                         className='mx3'
                         dangerouslySetInnerHTML={{__html: item.text}} />
@@ -92,7 +92,7 @@ class StoryDetail extends React.Component {
 
         const storyCredits = util.isArray(this.props.post.acf.story_credits)
         ? (
-            <div className='col-12 mt3 mb3 mr-auto ml-auto border bg-white border-box image-credit'>
+            <div className='col-12 mb3 mr-auto ml-auto border bg-white border-box image-credit'>
                 {this.props.post.acf.story_credits.map((item, i) => (
                     <div
                         className={`p2 ${i === this.props.post.acf.story_credits.length - 1 ? '' : 'border-bottom'}`}
@@ -118,23 +118,23 @@ class StoryDetail extends React.Component {
                 <div className='clearfix container container--story-items pt3'>
                     {items}
                 </div>
-                <div className="clearfix container pt3">
+                <div className="clearfix container">
                     {storyCredits}
                 </div>
-                <div className='clearfix container border mt3'>
+                <div className='clearfix container mt3 pl3 pr3'>
                     <div>
-                        <Link to={`/stories/${this.props.previousPost}`}>
-                            <div className='col col-6 border-right'>
+                        <Link className='link-prev' to={`/stories/${this.props.previousPost}`}>
+                            <div className='col col-6 border'>
                                 <div
-                                    className='p2 bold'>
+                                    className='p2 skew'>
                                     Prev
                                 </div>
                             </div>
                         </Link>
-                        <Link to={`/stories/${this.props.nextPost}`}>
-                            <div className='col-right col-6'>
+                        <Link className='link-next' to={`/stories/${this.props.nextPost}`}>
+                            <div className='col-right col-6 border'>
                                 <div
-                                    className='p2 bold right'>
+                                    className='p2 right skew'>
                                     Next
                                 </div>
                             </div>

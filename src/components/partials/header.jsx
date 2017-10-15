@@ -31,7 +31,7 @@ class Header extends React.Component {
                             </Link>
                             <span
                                 onClick={this.handleToggle}
-                                className='right cursor-pointer'>
+                                className='right cursor-pointer hover-skew'>
                                 Menu
                             </span>
                         </div>

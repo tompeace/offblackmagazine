@@ -12,7 +12,7 @@ class Menu extends React.Component {
         return (
             <div
                 style={{minHeight: 'calc(100vh - 110px)'}}
-                className="mt3 mr3 bg-white border col-right col-12 sm-col-6">
+                className="container-menu mt3 mr3 bg-white border col-right col-12 sm-col-6">
                 <nav>
                     <div className='border-bottom p2'>
                         Issues
