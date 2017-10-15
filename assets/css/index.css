@@ -63,11 +63,11 @@ body {
     font-family: "akzidenz", Helvetica, Arial, sans-serif;
 	font-variant: normal;
 	font-weight: 400;
-	line-height: 1.5 !imporant;
+	line-height: 1.5 !important;
 }
 
 .container {
-    max-width: 1540px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -336,4 +336,12 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+}
+
+.break-line {
+    white-space: pre-line;
+}
+
+.limit-line-length {
+    max-width: 40rem;
 }

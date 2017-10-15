@@ -62,18 +62,20 @@ class Menu extends React.Component {
                         </a>
                     </div>
                     <div className='border-bottom p2'>
-                        <a
+                        <Link
+                            onClick={this.handleToggle}
                             className='cursor-pointer hover-line-through'
-                            href="http://offblackmagazine.com/past/about">
+                            to='/about'>
                             About
-                        </a>
+                        </Link>
                     </div>
                     <div className='border-bottom p2'>
-                        <a
+                        <Link
+                            onClick={this.handleToggle}
                             className='cursor-pointer hover-line-through'
-                            href="http://offblackmagazine.com/past/contributors">
+                            to='/contributors'>
                             Contributors
-                        </a>
+                        </Link>
                     </div>
                 </nav>
             </div>
