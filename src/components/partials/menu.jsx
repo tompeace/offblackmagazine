@@ -21,50 +21,50 @@ class Menu extends React.Component {
                         <a
                             target='_blank'
                             href='/'
-                            className='block pb2 cursor-pointer hover-line-through'>
+                            className='hover-skew block pb2 cursor-pointer hover-skew'>
                             Anthology
                         </a>
                         <a
                             target='_blank'
                             href='http://offblackmagazine.com/past/issues/the-future-is-theirs/'
-                            className='block pb2 cursor-pointer hover-line-through'>
-                            THE FUTURE IS: THEIRS
+                            className='block pb2 cursor-pointer hover-skew'>
+                            The Future is Theirs
                         </a>
                         <a
                             target='_blank'
                             href='http://offblackmagazine.com/past/issues/man-made/'
-                            className='block pb2 cursor-pointer hover-line-through'>
+                            className='block pb2 cursor-pointer hover-skew'>
                             Man Made
                         </a>
                         <a
                             target='_blank'
                             href='http://offblackmagazine.com/past/issues/raw/'
-                            className='block pb2 cursor-pointer hover-line-through'>
+                            className='block pb2 cursor-pointer hover-skew'>
                             Raw
                         </a>
                         <a
                             target='_blank'
                             href='http://offblackmagazine.com/archive-cult'
-                            className='block pb2 cursor-pointer hover-line-through'>
+                            className='block pb2 cursor-pointer hover-skew'>
                             Cult
                         </a>
                         <a
                             target='_blank'
                             href='http://offblackmagazine.com/archive/double/'
-                            className='block pb2 cursor-pointer hover-line-through'>
+                            className='block pb2 cursor-pointer hover-skew'>
                             Double
                         </a>
                         <a
                             target='_blank'
                             href='http://offblackmagazine.com/archive/the-body'
-                            className='block pb2 mb4 cursor-pointer hover-line-through'>
+                            className='block pb2 mb4 cursor-pointer hover-skew'>
                             The Body
                         </a>
                     </div>
                     <div className='border-bottom p2'>
                         <Link
                             onClick={this.handleToggle}
-                            className='cursor-pointer hover-line-through'
+                            className='cursor-pointer hover-skew'
                             to='/about'>
                             About
                         </Link>
@@ -72,7 +72,7 @@ class Menu extends React.Component {
                     <div className='border-bottom p2'>
                         <Link
                             onClick={this.handleToggle}
-                            className='cursor-pointer hover-line-through'
+                            className='cursor-pointer hover-skew'
                             to='/contributors'>
                             Contributors
                         </Link>
