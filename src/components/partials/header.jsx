@@ -22,7 +22,7 @@ class Header extends React.Component {
             <header className='z1 relative clearfix'>
                 <div>
                     <div className={`z1 fixed left-0 right-0 top-0 ${this.state.menuActive ? 'bottom-0' :''}`}>
-                        <div className='bg-white mr3 ml3 mt3 p2 border border-black line-height-2'>
+                        <div className='bg-white mr3 ml3 mt3 p2 border border-black'>
                             <Link className='cursor-pointer' to='/stories'>
                                 Anthology Issue A/W 2017
                             </Link>

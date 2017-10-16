@@ -5,13 +5,13 @@ class Contributors extends React.Component {
         return (
             <div className='clearfix container relative'>
                 <div
-                    className='col-12 my3 md-m0 md-mt3 p2' 
+                    className='col-12 my3 md-m0 md-mt3 p2'
                     dangerouslySetInnerHTML={{__html: '&nbsp;'}}/>
-                <div className='md-show container border fixed top-0 bottom-0 left-0 right-0'>
+                <div className='grid-about sm-show container border fixed top-0 bottom-0 left-0 right-0'>
                     <div className='col col-6 height-100 border-right pointer-events'></div>
                 </div>
-                <div className='col col-12 md-col-6'>
-                    <div className='p2 border-top border-bottom md-border-0 md-border-bottom break-line'>
+                <div className='col col-12 sm-col-6'>
+                    <div className='p2 border-top border-bottom sm-border-0 sm-border-bottom break-line'>
                         PHOTOGRAPHERS
                     </div>
                     <div className='p2 border-bottom break-line'>
@@ -24,12 +24,11 @@ class Contributors extends React.Component {
                     </div>
                     <div className='p2 border-bottom break-line'>
                         <div className='limit-line-length'>
-                        {`Thomas Peace (Digital development of Anthology)
-                            James Curtis (Digital design and development of issues 'The Body', 'Double', and 'Cult')`}
+                        {`James Curtis (Digital design and development of issues 'The Body', 'Double', and 'Cult'), Braw.io (Digital development of issue 'The Future is: Theirs', Digital Design and development of issues 'Man Made' and 'Raw').`}
                         </div>
                     </div>
                 </div>
-                <div className='col col-12 md-col-6'>
+                <div className='col col-12 sm-col-6'>
                     <div className='p2 border-bottom break-line'>
                         STYLISTS
                     </div>

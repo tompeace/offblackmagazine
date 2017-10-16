@@ -50,7 +50,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 14px;
     height: 100%;
     width: 100%;
 }
@@ -66,9 +66,10 @@ body {
     width: 100%;
     font-size: 1rem;
     font-family: "akzidenz", Helvetica, Arial, sans-serif;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 1.5 !important;
+  	font-variant: normal;
+  	font-weight: 400;
+  	line-height: 1.5 !important;
+    overflow-x: hidden;
 }
 
 .container {
@@ -262,9 +263,9 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
   padding: 5px;
 }
 
-.hover-line-through:hover {
+/*.hover-line-through:hover {
     text-decoration: line-through;
-}
+}*/
 
 .cursor-pointer:hover {
     cursor: pointer;
@@ -374,8 +375,31 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
     min-height: auto
 }
 
+.grid-about{
+  z-index: -999;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
 @media (--breakpoint-md) {
     .text-story {
         min-height: 300px;
     }
+}
+
+
+::-webkit-selection {
+    color: red;
+    background: transparent;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: transparent;
+}
+
+::selection {
+    color: red;
+    background: transparent;
 }

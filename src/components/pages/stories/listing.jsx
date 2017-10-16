@@ -37,7 +37,7 @@ class ListingPage extends React.Component {
                                 <div className='aspect-2-3 overflow-hidden cursor-pointer'>
                                     <Link to={`/stories/${story.slug}`}>
                                         <div
-                                            className='p2 absolute border hover-card'
+                                            className='p2 absolute border hover-card hover-fade'
                                             dangerouslySetInnerHTML={{__html: story.title.rendered}} />
                                         <div className='hover-fade opacity-1'>
                                             <Image
