@@ -28,8 +28,8 @@ class About extends React.Component {
                     <div
                         className="p2 border-bottom break-line break-word"
                         dangerouslySetInnerHTML={{__html:
-                            `GENERAL ENQUIRIES <a href="info@offblackmagazine.com">info@offblackmagazine.com</a>
-                            SUBMISSIONS <a href="submission@offblackmagazine.com">submission@offblackmagazine.com</a>`
+                            `GENERAL ENQUIRIES <a href="mailto:info@offblackmagazine.com">info@offblackmagazine.com</a>
+                        SUBMISSIONS <a href="mailto:submission@offblackmagazine.com">submission@offblackmagazine.com</a>`
                         }} />
                 </div>
                 <div className="col col-12 sm-col-3 border-bottom md-border-0">
@@ -38,23 +38,23 @@ class About extends React.Component {
                         dangerouslySetInnerHTML={{__html:
                             `EDITOR–IN–CHIEF
                             Sarah Jo Palmer
-                            <a href="sarah@offblackmagazine.com">sarah@offblackmagazine.com</a>
+                            <a href="mailto:sarah@offblackmagazine.com">sarah@offblackmagazine.com</a>
 
                             EDITOR–IN–CHIEF
                             Claire Grech
-                            <a href="claire@offblackmagazine.com">claire@offblackmagazine.com</a>
+                            <a href="mailto:claire@offblackmagazine.com">claire@offblackmagazine.com</a>
 
                             CREATIVE DIRECTOR
                             Johanna Bonnevier
-                            <a href="johanna.b@offblackmagazine.com">johanna.b@offblackmagazine.com</a>
+                            <a href="mailto:johanna.b@offblackmagazine.com">johanna.b@offblackmagazine.com</a>
 
                             ART DIRECTOR
                             Peter Ainsworth
-                            <a href="peter@offblackmagazine.com">peter@offblackmagazine.com</a>
+                            <a href="mailto:peter@offblackmagazine.com">peter@offblackmagazine.com</a>
 
                             IMAGE EDITOR
                             Johanna Nyholm
-                            <a href="johanna.n@offblackmagazine.com">johanna.n@offblackmagazine.com</a>`
+                            <a href="mailto:johanna.n@offblackmagazine.com">johanna.n@offblackmagazine.com</a>`
                         }} />
                 </div>
                 <div className="col col-12 sm-col-3">
@@ -62,11 +62,11 @@ class About extends React.Component {
                         dangerouslySetInnerHTML={{__html:
                             `BEAUTY EDITOR
                             Linda Andersson
-                            <a href="linda@offblackmagazine.com">linda@offblackmagazine.com</a>
+                            <a href="mailto:linda@offblackmagazine.com">linda@offblackmagazine.com</a>
 
                             FASHION EDITOR
                             Grace Joel
-                            <a href="grace@offblackmagazine.com">grace@offblackmagazine.com</a>
+                            <a href="mailto:grace@offblackmagazine.com">grace@offblackmagazine.com</a>
 
                             FEATURES EDITOR
                             Victoria Spratt
