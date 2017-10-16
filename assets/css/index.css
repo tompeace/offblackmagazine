@@ -44,6 +44,11 @@
     src: url("../fonts/akzidenz.woff") format("woff");
 }
 
+@font-face {
+    font-family: "helvetica condensed";
+    src: url("../fonts/helvetica-condensed-bold.woff") format("woff");
+}
+
 html {
     font-size: 16px;
     height: 100%;
@@ -157,8 +162,26 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
     text-align: right;
 }
 
+.tr:hover .td-1{
+    -webkit-transform: translateX(-14px);
+    transform: translateX(-14px);
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
 .td-2{
     text-align: left;
+    -webkit-transform: translateX(-1px);
+    transform: translateX(-1px);
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.tr:hover .td-2{
+    -webkit-transform: translateX(19px);
+    transform: translateX(19px);
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
 }
 
 .center-carousel-img {
@@ -210,6 +233,7 @@ a, a:hover, a:visited, a:focus, a:link, a:active {
   text-transform: uppercase;
   margin-left: 18px;
   z-index: -1;
+  font-family: "helvetica condensed";
 }
 
 .title-story-credit h1,
